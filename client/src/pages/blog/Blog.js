@@ -4,8 +4,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
+
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
 import Header from "./Header";
 import MainFeaturedPost from "./MainFeaturedPost";
 import FeaturedPost from "./FeaturedPost";
@@ -27,30 +28,36 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: "Welcome to the new Alexa Community - Jaipur",
+  title: "Welcome! Alexa Community - Jaipur",
   description:
     "Alexa Dev Hub aims to provide resources and learning content all in one place to boost up your VUI developemnt skills. ",
   image: `${bannerLink}`,
   imgText: "main image description",
-  linkText: "Read More...",
 };
 
 const featuredPosts = [
   {
-    title: "Featured post",
-    date: "Nov 12",
+    title: "Upcoming Events",
+    date: "Early July 2020",
+    type: "Webinar",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageText: "Image Text",
+      "We are planning to take our first technical webinar next month. Do let us know what would you like to learn.",
+    suggestionPlaceholder: "Suggest you topics here...",
+    image: "/api/events/upcomingevent.png",
+    imageText: "Logo",
+    buttonText: "Register",
+    buttonDisable: true,
   },
   {
-    title: "Post title",
-    date: "Nov 11",
+    title: "Past Events",
+    date: "30th April 2020",
     description:
-      "This is a wider card with supporting text below as a natural lead-in to additional content.",
-    image: "https://source.unsplash.com/random",
-    imageText: "Image Text",
+      "Workshop on Making Alexa Skills for beginners. We learnt how to make a basic skill using Alexa Console.",
+    feedback: "Leave your feedback...",
+    image: "/api/events/pastevent.png",
+    imageText: "Logo",
+    buttonText: "Check Blog Post",
+    buttonDisable: true,
   },
 ];
 
@@ -58,22 +65,27 @@ const sidebar = {
   title: "Helpful Links",
   description: "A few links to webposts and YT videos.",
   archives: [
-    { title: "March 2020", url: "#" },
-    { title: "February 2020", url: "#" },
-    { title: "January 2020", url: "#" },
-    { title: "November 1999", url: "#" },
-    { title: "October 1999", url: "#" },
-    { title: "September 1999", url: "#" },
-    { title: "August 1999", url: "#" },
-    { title: "July 1999", url: "#" },
-    { title: "June 1999", url: "#" },
-    { title: "May 1999", url: "#" },
-    { title: "April 1999", url: "#" },
+    { title: "Install Alexa CLI", url: "#" },
+    { title: "Create Skill using ASK CLI", url: "#" },
+    { title: "Make API Skill", url: "#" },
+    { title: "Intent Chaining", url: "#" },
   ],
   social: [
-    { name: "GitHub", icon: GitHubIcon },
-    { name: "Twitter", icon: TwitterIcon },
-    { name: "Facebook", icon: FacebookIcon },
+    {
+      name: "GitHub",
+      icon: GitHubIcon,
+      url: "https://github.com/tarunnsingh/alexa-community-jaipur",
+    },
+    {
+      name: "LinkedIn",
+      icon: LinkedInIcon,
+      url: "https://www.linkedin.com/company/aacjaipur/",
+    },
+    {
+      name: "Instagram",
+      icon: InstagramIcon,
+      url: "https://www.instagram.com/amazon_alexa_jaipur/",
+    },
   ],
 };
 
@@ -112,8 +124,8 @@ export default function Blog() {
         </main>
       </Container>
       <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
+        title="Created with 🖤 and </> by Tarun"
+        description="Easing the Skill making process!"
       />
     </React.Fragment>
   );

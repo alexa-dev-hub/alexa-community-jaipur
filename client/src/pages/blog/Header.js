@@ -7,6 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -32,7 +34,15 @@ export default function Header(props) {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <Button size="small">Subscribe</Button>
+        <Button
+          size="small"
+          variant="outlined"
+          href="https://github.com/tarunnsingh/alexa-community-jaipur"
+        >
+          <span>
+            Contribute <FontAwesomeIcon icon={faGithub} />
+          </span>
+        </Button>
         <Typography
           component="h2"
           variant="h5"
@@ -46,8 +56,8 @@ export default function Header(props) {
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
+        <Button variant="outlined" size="small" color="primary">
+          Login
         </Button>
       </Toolbar>
       <Toolbar

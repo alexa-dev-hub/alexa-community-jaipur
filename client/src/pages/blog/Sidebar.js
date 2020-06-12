@@ -29,7 +29,7 @@ export default function Sidebar(props) {
         <Typography>{description}</Typography>
       </Paper>
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-        Archives
+        Blog Posts
       </Typography>
       {archives.map((archive, idx) => (
         <Link display="block" variant="body1" href={archive.url} key={idx}>
@@ -37,10 +37,10 @@ export default function Sidebar(props) {
         </Link>
       ))}
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-        Social
+        Connect
       </Typography>
       {social.map((network, idx) => (
-        <Link display="block" variant="body1" href="#" key={idx}>
+        <Link display="block" variant="body1" href={network.url} key={idx}>
           <Grid container direction="row" spacing={1} alignItems="center">
             <Grid item>
               <network.icon />

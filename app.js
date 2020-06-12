@@ -8,13 +8,14 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const userRouter = require("./routes/User");
 const postRouter = require("./routes/Post");
+const eventsRouter = require("./routes/Events");
 
 app.use(express.json());
 app.use(morgan("tiny"));
 
 app.use("/api/user", userRouter);
 app.use("/api/posts", postRouter);
-
+app.use("/api/events", eventsRouter);
 mongoose.connect(
   keys.MONGO_DB_URI,
   { useUnifiedTopology: true, useNewUrlParser: true },
