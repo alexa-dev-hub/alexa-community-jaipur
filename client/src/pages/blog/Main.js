@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
   markdown: {
     ...theme.typography.body2,
     padding: theme.spacing(3, 0),
+    overflowX: "scroll",
+    overflowWrap: true,
   },
   clapbutton: {
     maxWidth: "50px",
@@ -36,7 +38,7 @@ export default function Main(props) {
           <Markdown className={classes.markdown} key={idx}>
             {post}
           </Markdown>
-
+          <br />
           <ClapButton
             className={classes.clapbutton}
             count={0}

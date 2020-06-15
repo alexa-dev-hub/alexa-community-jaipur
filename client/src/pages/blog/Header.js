@@ -40,7 +40,7 @@ export default function Header(props) {
           href="https://github.com/tarunnsingh/alexa-community-jaipur"
         >
           <span>
-            Contribute <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} />
           </span>
         </Button>
         <Typography

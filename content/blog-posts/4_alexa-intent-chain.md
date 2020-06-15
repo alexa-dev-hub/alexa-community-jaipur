@@ -32,13 +32,12 @@ const WhatCanYouDoIntentHandler = {
     );
   },
   handle(handlerInput) {
-    const speakOutput =
-      "Great! I will start a generic Covid test for you, let us begin.";
+    const speakOutput = `Great! I will start a generic 
+      Covid test for you, let us begin.`;
     return handlerInput.responseBuilder
       .addDelegateDirective({
-        //    IGNORE
-        name: "FeverCheckIntent", //    FOR A
-      }) //    MOMENT
+        name: "FeverCheckIntent",
+      })
       .speak(speakOutput)
       .getResponse();
   },

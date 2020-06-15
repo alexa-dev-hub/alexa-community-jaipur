@@ -19,31 +19,7 @@ So here we will be using the [Covid19-API](https://api.covid19api.com/stats) to 
   "All": 169124,
   "AllUpdated": "2020-04-13 05:54:20 +0000 UTC",
   "Countries": 3582094,
-  "CountriesUpdated": "2020-04-13 05:54:20 +0000 UTC",
-  "ByCountry": 1417214,
-  "ByCountryUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "ByCountryLive": 3016561,
-  "ByCountryLiveUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "ByCountryTotal": 5655746,
-  "ByCountryTotalUpdated": "2020-04-13 05:54:20 +0000 UTC",
-  "DayOne": 1426178,
-  "DayOneUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "DayOneLive": 776053,
-  "DayOneLiveUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "DayOneTotal": 4283158,
-  "DayOneTotalUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "LiveCountryStatus": 5729133,
-  "LiveCountryStatusUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "LiveCountryStatusAfterDate": 5289785,
-  "LiveCountryStatusAfterDateUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "Stats": 170760,
-  "StatsUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "Default": 221914,
-  "DefaultUpdated": "2020-04-13 05:54:21 +0000 UTC",
-  "SubmitWebhook": 8034,
-  "SubmitWebhookUpdated": "2020-04-13 05:54:20 +0000 UTC",
-  "Summary": 27618060,
-  "SummaryUpdated": "2020-04-13 05:54:20 +0000 UTC"
+  "...": "..."
 }
 ```
 
@@ -92,7 +68,8 @@ const getData = async () => {
 
 ```javascript
 (response) => {
-  return response.data["Total"]; // has value of total case count
+  // has value of total case count
+  return response.data["Total"];
 };
 ```
 
@@ -115,7 +92,8 @@ Now inside our 'handle' method of our intent handler 'TotalcasesIntentHandler', 
 We then parse the JSON and get the key-value of ['Total'] and finally convert it to a string as follows:
 
 ```python
-   str(response.json()['Total']) # has value of total case count
+   # has value of total case count
+   str(response.json()['Total'])
 ```
 
 Now we append it to the speakOutput and return the response.
