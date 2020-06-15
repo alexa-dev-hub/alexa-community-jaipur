@@ -52,7 +52,7 @@ export default function Footer(props) {
           color="textSecondary"
           component="p"
         >
-          <a href={url}>Connect the Developer</a>
+          <a href={url}>Developer's Contact</a>
         </Typography>
       </Container>
     </footer>
