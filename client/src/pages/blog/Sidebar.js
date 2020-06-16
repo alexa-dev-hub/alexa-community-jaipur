@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import { Link as ScrollLink } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
@@ -32,9 +33,19 @@ export default function Sidebar(props) {
         Blog Posts
       </Typography>
       {archives.map((archive, idx) => (
-        <Link display="block" variant="body1" href={archive.url} key={idx}>
-          {archive.title}
-        </Link>
+        <Typography variant="body2">
+          <ScrollLink
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            key={idx}
+            to={`blogpost${idx + 1}`}
+          >
+            {archive.title}
+          </ScrollLink>
+        </Typography>
       ))}
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Connect

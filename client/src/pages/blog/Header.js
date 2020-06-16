@@ -25,6 +25,18 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  "@keyframes blinker": {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  },
+  blinker: {
+    color: "red",
+    animationName: "$blinker",
+    animationDuration: "0.6s",
+    animationTimingFunction: "ease-in-out",
+    animationIterationCount: "infinite",
+    animationDirection: "alternate",
+  },
 }));
 
 export default function Header(props) {
@@ -53,9 +65,6 @@ export default function Header(props) {
         >
           {title}
         </Typography>
-        <IconButton>
-          <SearchIcon />
-        </IconButton>
         <Button variant="outlined" size="small" color="primary">
           Login
         </Button>
@@ -77,6 +86,7 @@ export default function Header(props) {
             {section.title}
           </Link>
         ))}
+        <Typography className={classes.blinker}>Under Construction</Typography>
       </Toolbar>
     </React.Fragment>
   );

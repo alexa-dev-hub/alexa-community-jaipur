@@ -22,10 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const sections = [
-  { title: "Alexa Skills", url: "#" },
-  { title: "Alexa VUI", url: "#" },
-];
+const sections = [{ title: "Alexa Skills", url: "#" }];
 
 const mainFeaturedPost = {
   title: "Welcome! Alexa Community - Jaipur",
@@ -63,7 +60,7 @@ const featuredPosts = [
 
 const sidebar = {
   title: "Helpful Links",
-  description: "A few links to webposts and YT videos.",
+  description: "A few links to webposts and YT videos (TBA)",
   archives: [
     { title: "Install Alexa CLI", url: "#" },
     { title: "Create Skill using ASK CLI", url: "#" },

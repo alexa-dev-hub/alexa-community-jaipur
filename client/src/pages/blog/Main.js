@@ -35,7 +35,11 @@ export default function Main(props) {
       <Divider />
       {posts.map((post, idx) => (
         <>
-          <Markdown className={classes.markdown} key={idx}>
+          <Markdown
+            className={classes.markdown}
+            key={idx}
+            id={`blogpost${idx + 1}`}
+          >
             {post}
           </Markdown>
           <br />
