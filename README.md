@@ -1,4 +1,8 @@
+
+<img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
+
 # Alexa Blogs
+
 The website is dedicated to Alexa Development blogs. Blogs are posted by the members of Alexa Community, Jaipur.
 
 ## Stack Used: MERN.
