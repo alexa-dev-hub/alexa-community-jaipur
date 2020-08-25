@@ -30,6 +30,6 @@ Before moving forward, make sure you are aware of the MERN stack and have the ne
 The repository is good for beginners to work on. Those who have recently learnt React and Web devlopment and want to get their hands dirty with some cool open source projects are always welcome. We would love to see your creativity here.
 
 ## Want to be a part of Alexa Community, Jaipur.
-Follow us on [Linked](https://www.linkedin.com/company/aacjaipur). We will get in touch with you.
+Follow us on [LinkedIn](https://www.linkedin.com/company/aacjaipur). We will get in touch with you.
 
 ## Leave a STAR!
