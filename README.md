@@ -1,8 +1,12 @@
+<img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
+
 # Alexa Blogs
+
 The website is dedicated to Alexa Development blogs. Blogs are posted by the members of Alexa Community, Jaipur.
 
 ## Stack Used: MERN.
 The website stands on the MERN architecture. You can find the front-end part within the *client* folder.
+
 
 ## Further Development and Contribution
 The website requires a whole new fresher look. We would love to see your *creativity and bring out the designer within you.* You can spill your ideas using the Material UI library for React. We need designer who could create *wireframes* for the website. 
