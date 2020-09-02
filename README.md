@@ -57,6 +57,8 @@ The repository is good for beginners to work on. Those :man_technologist: who ha
 
 ## Want to be a part of Alexa Community, Jaipur.
 
-Follow us on [LinkedIn](https://www.linkedin.com/company/aacjaipur). We will get in touch with you.
+Follow us on 
+<a href="https://www.linkedin.com/company/aacjaipur" target="blank"><img align="center" src="https://user-images.githubusercontent.com/45101690/88830367-7b0a1700-d1eb-11ea-9ab1-5ab4699a1660.gif" alt="sumanth nidamanuri" height="20" width="20" /></a><br>
+We will get in touch with you.
 
 ## Leave a STAR!:star_struck:
