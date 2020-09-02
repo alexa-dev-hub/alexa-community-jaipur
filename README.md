@@ -2,20 +2,26 @@
 
 # Alexa Blogs
 
-The website is dedicated to Alexa Development blogs. Blogs are posted by the members of Alexa Community, Jaipur.
+The website is dedicated to Alexa Development blogs.:computer:<br> 
+Blogs are posted by the members of Alexa Community:people_holding_hands:, Jaipur.
 
 ## Stack Used: MERN.
 
-The website stands on the MERN architecture. You can find the front-end part within the _client_ folder.
+The website stands on the <b>MERN</b> architecture. <br>
+You can find the front-end part within the _client_ folder [here](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client)
 
 ## Further Development and Contribution
 
 The website requires a whole new fresher look. We would love to see your _creativity and bring out the designer within you._ You can spill your ideas using the Material UI library for React. We need designer who could create _wireframes_ for the website.
 
+
 ## Steps to get you started:
 
-Before moving forward, make sure you are aware of the MERN stack and have the necessary libraries and packages installed. React is built using the create-react-app package for your knowledge. Follow these steps to run the website locally.
+Before moving forward, make sure you are aware of the MERN stack and have the necessary libraries and packages installed.  <br>
+React is built using the create-react-app package for your knowledge.  <br>
+- If you want to start learning React go through the [documentation](https://reactjs.org/docs/getting-started.html)
 
+Follow these steps to run the website locally.
 - Clone the repo using terminal, giving this command `git clone https://github.com/alexa-dev-hub/alexa-community-jaipur.git`.
 - Then type `cd alexa-community-jaipur`.
 
@@ -45,12 +51,12 @@ module.exports = { MONGO_DB_URI };
 - You may have to change the the API Url to direct at the backend local port.
 - Explanation on client-side is in this [README](https://github.com/alexa-dev-hub/alexa-community-jaipur/blob/master/client/README.md)
 
-## Good for?
+## Good for?	:grinning:
 
-The repository is good for beginners to work on. Those who have recently learnt React and Web devlopment and want to get their hands dirty with some cool open source projects are always welcome. We would love to see your creativity here.
+The repository is good for beginners to work on. Those :man_technologist: who have recently learnt React and Web development and want to get their hands dirty with some cool open source projects are always welcome. We would love to see your creativity here.
 
 ## Want to be a part of Alexa Community, Jaipur.
 
 Follow us on [LinkedIn](https://www.linkedin.com/company/aacjaipur). We will get in touch with you.
 
-## Leave a STAR!
+## Leave a STAR!:star_struck:
