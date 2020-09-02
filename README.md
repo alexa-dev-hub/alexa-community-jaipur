@@ -8,11 +8,25 @@ Blogs are posted by the members of Alexa Community:people_holding_hands:, Jaipur
 ## Stack Used: MERN.
 
 The website stands on the <b>MERN</b> architecture. <br>
-You can find the front-end part within the _client_ folder [here](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client)
+You can find the front-end part within the [_client_](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client) folder. 
 
-## Further Development and Contribution
+## Stats
 
-The website requires a whole new fresher look. We would love to see your _creativity and bring out the designer within you._ You can spill your ideas using the Material UI library for React. We need designer who could create _wireframes_ for the website.
+![GitHub forks](https://img.shields.io/github/forks/alexa-dev-hub/alexa-community-jaipur?style=social)
+![GitHub stars](https://img.shields.io/github/stars/alexa-dev-hub/alexa-community-jaipur?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/alexa-dev-hub/alexa-community-jaipur?style=social)
+
+### Issues :
+![GitHub issues](https://img.shields.io/github/issues-raw/alexa-dev-hub/alexa-community-jaipur)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/alexa-dev-hub/alexa-community-jaipur)
+
+### Pull requests :
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/alexa-dev-hub/alexa-community-jaipur)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/alexa-dev-hub/alexa-community-jaipur)
+
+### Commit history :
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/alexa-dev-hub/alexa-community-jaipur)
+![GitHub last commit](https://img.shields.io/github/last-commit/alexa-dev-hub/alexa-community-jaipur)
 
 
 ## Steps to get you started:
@@ -55,10 +69,19 @@ module.exports = { MONGO_DB_URI };
 
 The repository is good for beginners to work on. Those :man_technologist: who have recently learnt React and Web development and want to get their hands dirty with some cool open source projects are always welcome. We would love to see your creativity here.
 
-## Want to be a part of Alexa Community, Jaipur.
 
+## Further Development and Contribution :speech_balloon:
+
+The website requires a whole new fresher look. We would love to see your _creativity and bring out the designer within you._ You can spill your ideas using the Material UI library for React. We need designer who could create _wireframes_ for the website.
+
+
+
+## Want to be a part of Alexa Community, Jaipur. :handshake:
 Follow us on 
 <a href="https://www.linkedin.com/company/aacjaipur" target="blank"><img align="center" src="https://user-images.githubusercontent.com/45101690/88830367-7b0a1700-d1eb-11ea-9ab1-5ab4699a1660.gif" alt="sumanth nidamanuri" height="20" width="20" /></a><br>
 We will get in touch with you.
 
-## Leave a STAR!:star_struck:
+## Facing Any Problem or need any Help? :thinking:
+Write us in [issues](https://github.com/issues) section. We will try to solve your issue within 24 hours :hourglass_flowing_sand:.<br>
+
+### Show some :heart: and :star: the repo to support the project! :star_struck:
