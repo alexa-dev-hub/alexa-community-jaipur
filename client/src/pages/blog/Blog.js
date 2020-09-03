@@ -130,9 +130,9 @@ export default function Blog() {
       </Container>
 
       <Footer
-        title="Created with 🖤 and </> by Tarun"
-        description="Easing the Skill making process!"
-        url="https://tarunnsingh.github.io/site"
+        title="Created with 🖤 by Alexa Community, Jaipur"
+        description="Contribute to the Development on Github."
+        url="https://github.com/alexa-dev-hub/alexa-community-jaipur"
       />
     </React.Fragment>
   );
