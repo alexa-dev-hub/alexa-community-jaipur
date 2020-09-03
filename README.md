@@ -15,6 +15,8 @@ You can find the front-end part within the [_client_](https://github.com/alexa-d
 ![GitHub forks](https://img.shields.io/github/forks/alexa-dev-hub/alexa-community-jaipur?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/alexa-dev-hub/alexa-community-jaipur?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/alexa-dev-hub/alexa-community-jaipur?style=social)
+![GitHub license](https://img.shields.io/badge/license-MIT-red)
+
 
 ### Issues :
 ![GitHub issues](https://img.shields.io/github/issues-raw/alexa-dev-hub/alexa-community-jaipur)
@@ -85,3 +87,5 @@ We will get in touch with you.
 Write us in [issues](https://github.com/issues) section. We will try to solve your issue within 24 hours :hourglass_flowing_sand:.<br>
 
 ### Show some :heart: and :star: the repo to support the project! :star_struck:
+
+This project is published and maintained under <b>MIT License</b>
