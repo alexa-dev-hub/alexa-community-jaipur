@@ -74,7 +74,9 @@ The repository is good for beginners to work on. Those :man_technologist: who ha
 
 The website requires a whole new fresher look. We would love to see your _creativity and bring out the designer within you._ You can spill your ideas using the Material UI library for React. We need designer who could create _wireframes_ for the website.
 
+## Regarding Deployment to Production :rocket:
 
+The website has been enabled with automatic deployments on **Heroku** (See Environments) from the master branch, make sure you do not leave any critical merge conflicts whenever you leave a PR.
 
 ## Want to be a part of Alexa Community, Jaipur. :handshake:
 Follow us on 
