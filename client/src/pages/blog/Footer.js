@@ -9,10 +9,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Alexa-Dev-Hub
-      </Link>{" "}
-      {new Date().getFullYear()}
+      Alexa-Dev-Hub {new Date().getFullYear()}
       {"."}
     </Typography>
   );
@@ -42,18 +39,10 @@ export default function Footer(props) {
           color="textSecondary"
           component="p"
         >
-          {description}
+          <a href={url}>{description}</a>
         </Typography>
 
         <Copyright />
-        <Typography
-          variant="subtitle2"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          <a href={url}>Developer's Contact</a>
-        </Typography>
       </Container>
     </footer>
   );

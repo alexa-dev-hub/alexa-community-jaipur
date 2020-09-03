@@ -59,8 +59,16 @@ const featuredPosts = [
 ];
 
 const sidebar = {
-  title: "Helpful Links",
-  description: "A few links to webposts and YT videos (TBA)",
+  webinar: [
+    {
+      title: "Tarun Singh @ GirlScript Summit, AP.",
+      description:
+        "A session where you learn all the basics of Alexa, it's functioning, architecture, terminology and also create a Skill.",
+      url: "https://www.youtube.com/embed/vOZGa6WJQoE",
+      date: "Aug-29-2020",
+    },
+  ],
+
   archives: [
     { title: "Install Alexa CLI", url: "#" },
     { title: "Create Skill using ASK CLI", url: "#" },
@@ -113,8 +121,7 @@ export default function Blog() {
             <Main title="Posts on Alexa Development" posts={posts} />
 
             <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
+              webinar={sidebar.webinar}
               archives={sidebar.archives}
               social={sidebar.social}
             />
@@ -123,9 +130,9 @@ export default function Blog() {
       </Container>
 
       <Footer
-        title="Created with 🖤 and </> by Tarun"
-        description="Easing the Skill making process!"
-        url="https://tarunnsingh.github.io/site"
+        title="Created with 🖤 by Alexa Community, Jaipur"
+        description="Contribute to the Development on Github."
+        url="https://github.com/alexa-dev-hub/alexa-community-jaipur"
       />
     </React.Fragment>
   );
