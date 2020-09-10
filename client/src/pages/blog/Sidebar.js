@@ -23,9 +23,11 @@ export default function Sidebar(props) {
   const { webinar, archives, social } = props;
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://api.github.com/repos/alexa-dev-hub/alexa-community-jaipur/contributors")
-      .then(response => response.json())
-      .then(data => setData(data));
+    fetch(
+      "https://api.github.com/repos/alexa-dev-hub/alexa-community-jaipur/contributors"
+    )
+      .then((response) => response.json())
+      .then((data) => setData(data));
   });
 
   return (
@@ -65,22 +67,52 @@ export default function Sidebar(props) {
           </ScrollLink>
         </Typography>
       ))}
-<Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-        Contributors 
+      <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
+        Contributors
       </Typography>
 
-  <div style={{padding:"15px",background:"#252021", borderRadius:"10px",fontFamily:"Consolas", fontSize:"20px"}}>
-        {data.map( contributor => (
-      
-        ( contributor.type!=="Bot" && 
-        <div style={{padding:"15px",display:"flex",justifyContent:"flex-start",background:"#252021"}}>
-          <img  height="50" widht="50" src={contributor.avatar_url} style={{borderRadius:"100%"}} /> 
-          <a style={{padding:"15px", textDecoration:"none", color:"#31c4f3"}} href={contributor.url}>@{contributor.login}</a><br/><br/>
-        </div>
-        )
-      
-        ))}
-        </div>
+      <div
+        style={{
+          padding: "15px",
+          background: "#252021",
+          borderRadius: "10px",
+          fontFamily: "Consolas",
+          fontSize: "20px",
+        }}
+      >
+        {data.map(
+          (contributor) =>
+            contributor.type !== "Bot" && (
+              <div
+                style={{
+                  padding: "15px",
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  background: "#252021",
+                }}
+              >
+                <img
+                  height="50"
+                  widht="50"
+                  src={contributor.avatar_url}
+                  style={{ borderRadius: "100%" }}
+                />
+                <a
+                  style={{
+                    padding: "15px",
+                    textDecoration: "none",
+                    color: "#31c4f3",
+                  }}
+                  href={`https://github.com/${contributor.login}`}
+                >
+                  @{contributor.login}
+                </a>
+                <br />
+                <br />
+              </div>
+            )
+        )}
+      </div>
 
       <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
         Connect
