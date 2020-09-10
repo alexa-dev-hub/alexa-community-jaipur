@@ -75,7 +75,7 @@ export default function Sidebar(props) {
         ( contributor.type!=="Bot" && 
         <div style={{padding:"15px",display:"flex",justifyContent:"flex-start",background:"#252021"}}>
           <img  height="50" widht="50" src={contributor.avatar_url} style={{borderRadius:"100%"}} /> 
-          <a style={{padding:"15px", textDecoration:"none", color:"#31c4f3"}} href={contributor.url}>$ {contributor.login}</a><br/><br/>
+          <a style={{padding:"15px", textDecoration:"none", color:"#31c4f3"}} href={contributor.url}>@{contributor.login}</a><br/><br/>
         </div>
         )
       
