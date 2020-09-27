@@ -74,6 +74,7 @@ const sidebar = {
     { title: "Create Skill using ASK CLI", url: "#" },
     { title: "Make API Skill", url: "#" },
     { title: "Intent Chaining", url: "#" },
+    { title: "How to use Alexa Skill from Template", url: "usingtemplate" },
   ],
   social: [
     {

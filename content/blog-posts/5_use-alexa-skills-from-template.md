@@ -1,4 +1,4 @@
-## <a name="usingtemplate"></a> Intent Chaining
+## <a name="usingtemplate"></a> How to use Alexa Skill from Template
 
 #### Sept 28, 2020 by [Tarun](/)
 
