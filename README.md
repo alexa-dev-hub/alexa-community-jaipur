@@ -1,4 +1,7 @@
 <img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Alexa Blogs
 
@@ -91,3 +94,25 @@ Write us in [issues](https://github.com/issues) section. We will try to solve yo
 ### Show some :heart: and :star: the repo to support the project! :star_struck:
 
 This project is published and maintained under <b>MIT License</b>
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/tarunnsingh"><img src="https://avatars0.githubusercontent.com/u/31896659?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tarun Singh</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=tarunnsingh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/imabp"><img src="https://avatars3.githubusercontent.com/u/53480076?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abir</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=imabp" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sumanthst24"><img src="https://avatars3.githubusercontent.com/u/45101690?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumanth Nidamanuri</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=sumanthst24" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

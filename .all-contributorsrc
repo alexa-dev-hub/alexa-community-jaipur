@@ -1,0 +1,42 @@
+{
+  "projectName": "alexa-community-jaipur",
+  "projectOwner": "alexa-dev-hub",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "tarunnsingh",
+      "name": "Tarun Singh",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/31896659?v=4",
+      "profile": "https://github.com/tarunnsingh",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "imabp",
+      "name": "Abir",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/53480076?v=4",
+      "profile": "https://github.com/imabp",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sumanthst24",
+      "name": "Sumanth Nidamanuri",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/45101690?v=4",
+      "profile": "https://github.com/sumanthst24",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
