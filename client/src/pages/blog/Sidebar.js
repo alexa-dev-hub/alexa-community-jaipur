@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
   sidebarSection: {
     marginTop: theme.spacing(3),
   },
+  root: {
+    color:'blue',
+    '&:hover': {
+      cursor: 'pointer',
+  },
 }));
 
 export default function Sidebar(props) {
@@ -53,7 +58,7 @@ export default function Sidebar(props) {
         Important Links and Blog Posts
       </Typography>
       {archives.map((archive, idx) => (
-        <Typography variant="body2">
+        <Typography variant="body2" className={classes.root}>
           <ScrollLink
             activeClass="active"
             spy={true}
