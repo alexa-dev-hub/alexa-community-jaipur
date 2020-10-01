@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     color:'blue',
     '&:hover': {
       cursor: 'pointer',
-  },
+  }
 }));
 
 export default function Sidebar(props) {
