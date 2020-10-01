@@ -110,6 +110,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sumanthst24"><img src="https://avatars3.githubusercontent.com/u/45101690?v=4" width="100px;" alt=""/><br /><sub><b>Sumanth Nidamanuri</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=sumanthst24" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/hariom1625"><img src="https://avatars1.githubusercontent.com/u/66957239?v=4" width="100px;" alt=""/><br /><sub><b>Hari Om Yadav</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=hariom1625" title="Code">💻</a></td>
     <td align="center"><a href="http://web.iiit.ac.in/~dhruv.kapur"><img src="https://avatars0.githubusercontent.com/u/37783178?v=4" width="100px;" alt=""/><br /><sub><b>Dhruv Kapur</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=dkapur17" title="Code">💻</a></td>
+    <td align="center"><a href="http://garimasingh.netlify.app"><img src="https://avatars2.githubusercontent.com/u/44302373?v=4" width="100px;" alt=""/><br /><sub><b>Garima Singh</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=garimasingh128" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/priyanshu0405"><img src="https://avatars0.githubusercontent.com/u/58037946?v=4" width="100px;" alt=""/><br /><sub><b>priyanshu0405</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=priyanshu0405" title="Code">💻</a></td>
   </tr>
 </table>
 
