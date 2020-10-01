@@ -36,7 +36,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "hariom1625",
+      "name": "Hari Om Yadav",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/66957239?v=4",
+      "profile": "https://github.com/hariom1625",
+      "contributions": [
+        "code"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
