@@ -17,11 +17,13 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
   },
   root: {
-    color:'blue',
-    '&:hover': {
-      cursor: 'pointer',
-  }
+    color: "blue",
+    "&:hover": {
+      cursor: "pointer",
+    },
+  },
 }));
+
 
 export default function Sidebar(props) {
   const classes = useStyles();
