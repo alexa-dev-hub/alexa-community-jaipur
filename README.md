@@ -1,7 +1,7 @@
 <img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Alexa Blogs
@@ -113,6 +113,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://web.iiit.ac.in/~dhruv.kapur"><img src="https://avatars0.githubusercontent.com/u/37783178?v=4" width="100px;" alt=""/><br /><sub><b>Dhruv Kapur</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=dkapur17" title="Code">💻</a></td>
     <td align="center"><a href="http://garimasingh.netlify.app"><img src="https://avatars2.githubusercontent.com/u/44302373?v=4" width="100px;" alt=""/><br /><sub><b>Garima Singh</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=garimasingh128" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/priyanshu0405"><img src="https://avatars0.githubusercontent.com/u/58037946?v=4" width="100px;" alt=""/><br /><sub><b>priyanshu0405</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=priyanshu0405" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ManojAthreya"><img src="https://avatars2.githubusercontent.com/u/39020374?v=4" width="100px;" alt=""/><br /><sub><b>Manoj Athreya A</b></sub></a><br /><a href="#design-ManojAthreya" title="Design">🎨</a></td>
   </tr>
 </table>
 
