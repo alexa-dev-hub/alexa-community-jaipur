@@ -15,6 +15,7 @@ const eventsRouter = require("./routes/Events");
 
 app.use(express.json());
 app.use(morgan("tiny"));
+app.use(cookieParser());
 app.use(passport.initialize());
 
 app.use("/api/user", userRouter);

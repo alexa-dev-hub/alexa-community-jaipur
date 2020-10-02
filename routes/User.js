@@ -60,16 +60,18 @@ userRouter.post("/register", (req, res) => {
 
 userRouter.post(
   "/login",
-  passport.authenticate("local", { session: true }),
+  passport.authenticate("local", { session: false }),
   (req, res) => {
-    const { _id, username, role, fullName, email } = req.user;
-    const token = signedToken(_id);
-    res.cookie("access_token", token, { httpOnly: true, sameSite: true });
-    res.status(200).json({
-      isAuthenticated: true,
-      user: { username, role, fullName, email },
-      message: { msgBody: "Login Succesful", msgError: false },
-    });
+    if (req.isAuthenticated()) {
+      const { _id, username, role, fullName, email } = req.user;
+      const token = signedToken(_id);
+      res.cookie("access_token", token, { httpOnly: true, sameSite: true });
+      res.status(200).json({
+        isAuthenticated: true,
+        user: { username, role, fullName, email },
+        message: { msgBody: "Login Succesful", msgError: false },
+      });
+    }
   }
 );
 
@@ -78,7 +80,7 @@ userRouter.get(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     res.clearCookie("access_token");
-    res.json({ user: { email: "", role: "" }, success: true });
+    res.json({ user: { email: "", role: "", username: "" }, success: true });
   }
 );
 
