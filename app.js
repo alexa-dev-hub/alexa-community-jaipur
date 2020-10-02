@@ -1,8 +1,10 @@
 const express = require("express");
 const morgan = require("morgan");
 const chalk = require("chalk");
+const cookieParser = require("cookie-parser");
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
+const passport = require("passport");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,6 +15,7 @@ const eventsRouter = require("./routes/Events");
 
 app.use(express.json());
 app.use(morgan("tiny"));
+app.use(passport.initialize());
 
 app.use("/api/user", userRouter);
 app.use("/api/posts", postRouter);
