@@ -58,7 +58,8 @@ module.exports = { MONGO_DB_URI };
 ```
 
 - The above URI is just a sample. You will get a different URI when you connect your cluster to an application. It is advised you create new credentials and a new DB for working. You will then replace these details in the URI, namely < username >, < password > and < dbname >.
-- Also make sure to **whitelist your IP address** in the cluster's **Network Access Tab** on MongoDB Atlas. You can allow traffic from all by putting in `0.0.0.0/0` too, for development purposes.
+- Also make sure to **whitelist your IP address** in the cluster's **Network Access Tab** on MongoDB Atlas. You can allow traffic from all by putting in `0.0.0.0/0` too, for development purposes. 
+
 **Now proceed forward:**
 
 - Now if you have nodemon installed then type `npm run dev` to start the development backend server.
