@@ -24,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function Sidebar(props) {
   const classes = useStyles();
   const { webinar, archives, social } = props;
@@ -101,6 +100,7 @@ export default function Sidebar(props) {
                 <img
                   height="50"
                   widht="50"
+                  alt=""
                   src={contributor.avatar_url}
                   style={{ borderRadius: "100%" }}
                 />

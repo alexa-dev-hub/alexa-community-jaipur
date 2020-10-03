@@ -15,7 +15,6 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import blogService from "../../services/blogpost";
 import bannerLink from "../../static/banner.png";
-import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
@@ -101,7 +100,7 @@ export default function Blog() {
 
   useEffect(() => {
     blogService.fetchPosts().then((data) => {
-      const { message, content } = data;
+      const { content } = data;
       setPosts(content);
     });
   }, []);
