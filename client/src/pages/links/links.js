@@ -4,7 +4,7 @@ const links = {
     linkedin:'https://www.linkedin.com/company/aacjaipur/',
     instagram:'https://www.instagram.com/amazon_alexa_jaipur/',
     v1_website:'http://alexadevhub.herokuapp.com/',
-    v2_website:'https://alexadevhub.netlify.app/',
+    v2_website:'https://alexadevhub.netlify.com/',
     webinar1:'https://www.youtube.com/embed/vOZGa6WJQoE',
     contributors:'https://api.github.com/repos/alexa-dev-hub/alexa-community-jaipur/contributors',
     api:'http://alexadevhub.herokuapp.com',
