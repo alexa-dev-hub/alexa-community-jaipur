@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { Link as ScrollLink } from "react-scroll";
 import Iframe from "react-iframe";
-
+import links from '../links/links'
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
     padding: theme.spacing(2),
@@ -30,7 +30,7 @@ export default function Sidebar(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(
-      "https://api.github.com/repos/alexa-dev-hub/alexa-community-jaipur/contributors"
+      links.contributors
     )
       .then((response) => response.json())
       .then((data) => setData(data));

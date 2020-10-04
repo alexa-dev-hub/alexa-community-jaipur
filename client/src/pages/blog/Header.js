@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
+import links from '../links/links'
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
@@ -47,7 +47,7 @@ export default function Header(props) {
         <Button
           size="small"
           variant="outlined"
-          href="https://github.com/tarunnsingh/alexa-community-jaipur"
+          href={links.github}
         >
           <span>
             <FontAwesomeIcon icon={faGithub} />
