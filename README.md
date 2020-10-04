@@ -3,7 +3,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-
+# ✌ We are upgrading to V2.🎉
 # Alexa Blogs
 
 The website is dedicated to Alexa Development blogs.:computer:<br> 
