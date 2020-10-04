@@ -1,6 +1,6 @@
 export default {
   fetchPosts: () => {
-    return fetch("/api/posts")
+    return fetch("https://alexadevhub.herokuapp.com/api/posts")
       .then((res) => {
         if (res.status !== 401) {
           return res.json();
