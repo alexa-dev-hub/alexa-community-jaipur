@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
+import links from '../links/links'
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import Header from "./Header";
@@ -63,7 +64,7 @@ const sidebar = {
       title: "Tarun Singh @ GirlScript Summit, AP.",
       description:
         "A session where you learn all the basics of Alexa, it's functioning, architecture, terminology and also create a Skill.",
-      url: "https://www.youtube.com/embed/vOZGa6WJQoE",
+      url: links.webinar1,
       date: "Aug-29-2020",
     },
   ],
@@ -79,17 +80,17 @@ const sidebar = {
     {
       name: "GitHub",
       icon: GitHubIcon,
-      url: "https://github.com/tarunnsingh/alexa-community-jaipur",
+      url: links.github,
     },
     {
       name: "LinkedIn",
       icon: LinkedInIcon,
-      url: "https://www.linkedin.com/company/aacjaipur/",
+      url: links.linkedin,
     },
     {
       name: "Instagram",
       icon: InstagramIcon,
-      url: "https://www.instagram.com/amazon_alexa_jaipur/",
+      url: links.instagram,
     },
   ],
 };
@@ -132,7 +133,7 @@ export default function Blog() {
       <Footer
         title="Created with 🖤 by Alexa Community, Jaipur"
         description="Contribute to the Development on Github."
-        url="https://github.com/alexa-dev-hub/alexa-community-jaipur"
+        url={links.github}
       />
     </React.Fragment>
   );
