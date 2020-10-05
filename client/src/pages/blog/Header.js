@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const { sections, title } = props;
+  const { sections } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -93,7 +93,7 @@ export default function Header(props) {
             <div id='logo'>
               <div id='covering'></div>
               <div id='logoimgbox'>
-                <img id='logo-img' src={logo} />
+                <img id='logo-img' src={logo} alt='alexa-logo' />
               </div>
               <div id='logo-text'>alexa dev hub</div>
             </div>
