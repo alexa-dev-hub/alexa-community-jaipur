@@ -73,11 +73,11 @@ Follow these steps to run the website locally.
 ## FOR WORKING ON THE BACKEND ONLY (Server Side - NODE/EXPRESS/MONGO)
 Follow these steps to run the Server locally.
 - Clone and browse to the project's directory.
-- Switch Branch to `v1-deployment` by `git checkout origin/v1-deployment`.
+- Switch Branch to `v1-deployment` by `git checkout origin/v1-deployment`.  
 **Before moving to the next steps, first put up the MONGO_DB_URI.**
 
-- Inside the _config_ folder, add a file named _devkeys.js_.
-- Add this code.
+> - Inside the _config_ folder, add a file named _devkeys.js_.
+> - Add this code.
 
 ```javascript
 const MONGO_DB_URI =
@@ -85,8 +85,8 @@ const MONGO_DB_URI =
 
 module.exports = { MONGO_DB_URI };
 ```
-- The above URI is just a sample. You will get a different URI when you connect your cluster to an application. It is advised you create new credentials and a new DB for working. You will then replace these details in the URI, namely < username >, < password > and < dbname >.
-- Also make sure to **whitelist your IP address** in the cluster's **Network Access Tab** on MongoDB Atlas. You can allow traffic from all by putting in `0.0.0.0/0` too, for development purposes. 
+> - The above URI is just a sample. You will get a different URI when you connect your cluster to an application. It is advised you create new credentials and a new DB for working. You will then replace these details in the URI, namely < username >, < password > and < dbname >.
+> - Also make sure to **whitelist your IP address** in the cluster's **Network Access Tab** on MongoDB Atlas. You can allow traffic from all by putting in `0.0.0.0/0` too, for development purposes. 
 
 - Run `npm install`.
 - Start with `npm run server` or `npm run server-dev`.  
