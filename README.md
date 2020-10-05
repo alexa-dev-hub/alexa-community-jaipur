@@ -1,9 +1,11 @@
 <img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-# ✌ We are upgrading to V2.🎉
+# ✌ We just got upgraded to V2.🎉
+Check here at: https://alexadevhub.netlify.com 
+
 # Alexa Blogs
 
 The website is dedicated to Alexa Development blogs.:computer:<br> 
@@ -13,6 +15,23 @@ Blogs are posted by the members of Alexa Community:people_holding_hands:, Jaipur
 
 The website stands on the <b>MERN</b> architecture. <br>
 You can find the front-end part within the [_client_](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client) folder. 
+
+## Development Guidelines
+We have shifted our codebase from Heroku to Netlify and now have decoupled Backend and Frontend branches.
+This helps us to maintain code more easily. We follow modular coding practices.
+
+<img src="https://user-images.githubusercontent.com/53480076/95044924-5906a680-06fe-11eb-8d63-b9d7a8dcdac2.png">
+
+### Note
+Frontend is hosted on Netlify.
+Backend is on Heroku
+1. All changes regarding **FrontEnd** should be made in `master`. For contributors, if you are working on **frontend**, you need to send PR on `master` branch
+2. All changes regarding **BackEnd** should be made in `v1-deployment`. For contributors, if you are working on **backend**, you need to send PR on `v1-deployment` branch.
+#### [IMPORTANT] Maintainers, DO NOT merge these two branches `master` and `v1-deployment`. This would lead to **kill of application**.
+
+
+
+
 
 ## Stats
 
@@ -116,6 +135,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/ManojAthreya"><img src="https://avatars2.githubusercontent.com/u/39020374?v=4" width="100px;" alt=""/><br /><sub><b>Manoj Athreya A</b></sub></a><br /><a href="#design-ManojAthreya" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/harshalkaigaonkar"><img src="https://avatars0.githubusercontent.com/u/65395607?v=4" width="100px;" alt=""/><br /><sub><b>harshal kaigaonkar</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=harshalkaigaonkar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/TheGiraffe"><img src="https://avatars1.githubusercontent.com/u/4595588?v=4" width="100px;" alt=""/><br /><sub><b>Sophia</b></sub></a><br /><a href="#design-TheGiraffe" title="Design">🎨</a></td>
   </tr>
 </table>
 
