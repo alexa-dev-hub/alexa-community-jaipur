@@ -1,0 +1,231 @@
+:root {
+	--color-black: #000;
+	--color-white: #fff;
+	--color-brand-1: #3be0ec;
+	--color-brand-2: #5eaefd;
+	--color-brand-3: #073063;
+	--color-dark: var(--color-brand-3);
+	--color-light:  var(--color-brand-1);
+}
+
+*,
+*:after,
+:before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+}
+
+svg {
+	min-width: 10rem;
+	max-height: 10rem;
+	margin: 2rem;
+	display: inline-block;
+}
+
+@keyframes circle {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes circle-hide {
+	to {
+		opacity: 0;
+	}
+}
+@keyframes cloud {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes line {
+	0% {
+		stroke-dashoffset: 1850;
+	}
+	100% {
+		stroke-dashoffset: 940;
+	}
+}
+@keyframes spin {
+	0% {
+		transform: rotate(-90deg) translate3d(0, 0, 0);
+	}
+	100% {
+		transform: rotate(270deg) translate3d(0, 0, 0);
+	}
+}
+
+/*** SWITCH THEME ***/
+.theme-container {
+	width: 100%;
+	height: 100%;
+	padding: 2rem;
+	position: absolute;
+	display: flex;
+	background-color: var(--color-black);
+	transition: 0.4s;
+}
+
+.theme-container.light {
+	background-color: var(--color-white);
+}
+
+.switch {
+	width: 7rem;
+	height: 3rem;
+	display: inline-block;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+}
+
+.switch .theme-switcher {
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
+	opacity: 0;
+}
+
+.slider {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--color-brand-2);
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.slider:before {
+	content: "";
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+	position: absolute;
+	left: 0.5rem;
+	top: 50%;
+	transform: translate(0, -50%);
+	background-color: var(--color-dark);
+	transition: 0.4s;
+}
+
+.theme-switcher:checked + .slider:before {
+	left: initial;
+	right: 0.5rem;
+	background-color: var(--color-light);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/*** LOADER 1 ***/
+[data-name="loader-1"] {
+	overflow: visible;
+}
+[data-name="loader-1"] path {
+	fill: none;
+	stroke-miterlimit: 10;
+	stroke-width: 3;
+	stroke-linecap: round;
+}
+.loader-anim[data-name="loader-1"] path[data-name="circle-1"] {
+	animation: circle 1s linear 0s forwards, circle-hide 0.5s linear 1s forwards;
+}
+.loader-anim[data-name="loader-1"] path[data-name="circle-2"] {
+	animation: circle 1s linear 0.7s forwards,
+		circle-hide 0.5s linear 2.2s forwards;
+}
+.loader-anim[data-name="loader-1"] path[data-name="circle-3"] {
+	animation: circle 1s linear 1s forwards, circle-hide 1s linear 1.8s forwards;
+}
+.loader-anim[data-name="loader-1"] path[data-name="circle-4"] {
+	animation: circle 1s linear 0.5s forwards,
+		circle-hide 0.5s linear 2s forwards;
+}
+.loader-anim[data-name="loader-1"] path[data-name="cloud"] {
+	stroke-width: 4;
+	animation: cloud 2s linear 2s forwards;
+}
+.loader-anim[data-name="loader-1"] path[data-name="cloud-light"] {
+	stroke-width: 6;
+	stroke: var(--color-white);
+	animation: cloud 2.2s linear 1.5s forwards;
+}
+
+.theme-container.light [data-name="loader-1"] path[data-name="cloud-light"] {
+	stroke: var(--color-brand-1);
+}
+
+/*** LOADER 2 ***/
+[data-name="loader-2"] {
+	overflow: visible;
+}
+[data-name="loader-2"] path {
+	fill: none;
+	stroke-miterlimit: 10;
+	stroke-width: 3;
+	stroke-linecap: round;
+}
+.loader-anim[data-name="loader-2"] path[data-name="circle-1"] {
+	animation: circle 2s linear 0s forwards;
+}
+.loader-anim[data-name="loader-2"] path[data-name="circle-2"] {
+	animation: circle 2s linear 2s forwards;
+}
+.loader-anim[data-name="loader-2"] path[data-name="circle-3"] {
+	animation: circle 2s linear 1.5s forwards;
+}
+.loader-anim[data-name="loader-2"] path[data-name="circle-4"] {
+	animation: circle 2s linear 2.5s forwards;
+}
+.loader-anim[data-name="loader-2"] path[data-name="cloud"] {
+	stroke-width: 4;
+	animation: cloud 3s linear 4s forwards;
+}
+.loader-anim[data-name="loader-2"] path[data-name="cloud-light"] {
+	stroke-width: 6;
+	stroke: var(--color-white);
+	animation: cloud 3.2s linear 4.5s forwards;
+}
+.theme-container.light [data-name="loader-2"] path[data-name="cloud-light"] {
+	stroke: var(--color-brand-1);
+}
+
+/*** LOADER 3 ***/
+[data-name="loader-3"] {
+	transform: scale(1.5);
+}
+[data-name="loader-3"] circle {
+	fill: none;
+	stroke-miterlimit: 10;
+	stroke-width: 4;
+	stroke-linecap: round;
+}
+[data-name="loader-3"] .back {
+	stroke: var(--color-brand-3);
+}
+
+.loader-anim[data-name="loader-3"] .forward {
+	stroke-width: 6;
+	stroke-dasharray: 465;
+	animation: line 10s linear infinite, spin 9s linear infinite;
+	transform-origin: 50% 50%;
+}
