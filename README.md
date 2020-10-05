@@ -1,7 +1,7 @@
 <img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 # ✌ We just got upgraded to V2.🎉
 Check here at: https://alexadevhub.netlify.com 
@@ -136,6 +136,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/ManojAthreya"><img src="https://avatars2.githubusercontent.com/u/39020374?v=4" width="100px;" alt=""/><br /><sub><b>Manoj Athreya A</b></sub></a><br /><a href="#design-ManojAthreya" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/harshalkaigaonkar"><img src="https://avatars0.githubusercontent.com/u/65395607?v=4" width="100px;" alt=""/><br /><sub><b>harshal kaigaonkar</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=harshalkaigaonkar" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/TheGiraffe"><img src="https://avatars1.githubusercontent.com/u/4595588?v=4" width="100px;" alt=""/><br /><sub><b>Sophia</b></sub></a><br /><a href="#design-TheGiraffe" title="Design">🎨</a></td>
   </tr>
 </table>
 
