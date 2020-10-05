@@ -90,8 +90,13 @@ export default function Header(props) {
             noWrap
             className={classes.toolbarTitle}
           >
-            <img src={logo} alt='logo-header' className={classes.image} />
-            {title}
+            <div id='logo'>
+              <div id='covering'></div>
+              <div id='logoimgbox'>
+                <img id='logo-img' src={logo} />
+              </div>
+              <div id='logo-text'>alexa dev hub</div>
+            </div>
           </Typography>
 
           <Button size='small' onClick={handleMenu}>
