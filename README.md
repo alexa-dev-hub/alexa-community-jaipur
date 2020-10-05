@@ -3,7 +3,9 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-# ✌ We are upgrading to V2.🎉
+# ✌ We just got upgraded to V2.🎉
+Check here at: https://alexadevhub.netlify.com 
+
 # Alexa Blogs
 
 The website is dedicated to Alexa Development blogs.:computer:<br> 
@@ -13,6 +15,23 @@ Blogs are posted by the members of Alexa Community:people_holding_hands:, Jaipur
 
 The website stands on the <b>MERN</b> architecture. <br>
 You can find the front-end part within the [_client_](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client) folder. 
+
+## Development Guidelines
+We have shifted our codebase from Heroku to Netlify and now have decoupled Backend and Frontend branches.
+This helps us to maintain code more easily. We follow modular coding practices.
+
+<img src="https://user-images.githubusercontent.com/53480076/95044924-5906a680-06fe-11eb-8d63-b9d7a8dcdac2.png">
+
+### Note
+Frontend is hosted on Netlify.
+Backend is on Heroku
+1. All changes regarding **FrontEnd** should be made in `master`. For contributors, if you are working on **frontend**, you need to send PR on `master` branch
+2. All changes regarding **BackEnd** should be made in `v1-deployment`. For contributors, if you are working on **backend**, you need to send PR on `v1-deployment` branch.
+3. Maintainers, DO NOT merge these two branches `master` and `v1-deployment`. This would lead to kill of application.
+
+
+
+
 
 ## Stats
 
