@@ -27,7 +27,7 @@ Frontend is hosted on Netlify.
 Backend is on Heroku
 1. All changes regarding **FrontEnd** should be made in `master`. For contributors, if you are working on **frontend**, you need to send PR on `master` branch
 2. All changes regarding **BackEnd** should be made in `v1-deployment`. For contributors, if you are working on **backend**, you need to send PR on `v1-deployment` branch.
-3. Maintainers, DO NOT merge these two branches `master` and `v1-deployment`. This would lead to kill of application.
+#### [IMPORTANT] Maintainers, DO NOT merge these two branches `master` and `v1-deployment`. This would lead to **kill of application**.
 
 
 
