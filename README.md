@@ -11,28 +11,6 @@ Check here at: https://alexadevhub.netlify.com
 The website is dedicated to Alexa Development blogs.:computer:<br> 
 Blogs are posted by the members of Alexa Community:people_holding_hands:, Jaipur.
 
-## Stack Used: MERN.
-
-The website stands on the <b>MERN</b> architecture. <br>
-You can find the front-end part within the [_client_](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client) folder. 
-
-## Development Guidelines
-We have shifted our codebase from Heroku to Netlify and now have decoupled Backend and Frontend branches.
-This helps us to maintain code more easily. We follow modular coding practices.
-
-<img src="https://user-images.githubusercontent.com/53480076/95044924-5906a680-06fe-11eb-8d63-b9d7a8dcdac2.png">
-
-### Note
-Frontend is hosted on Netlify.
-Backend is on Heroku
-1. All changes regarding **FrontEnd** should be made in `master`. For contributors, if you are working on **frontend**, you need to send PR on `master` branch
-2. All changes regarding **BackEnd** should be made in `v1-deployment`. For contributors, if you are working on **backend**, you need to send PR on `v1-deployment` branch.
-#### [IMPORTANT] Maintainers, DO NOT merge these two branches `master` and `v1-deployment`. This would lead to **kill of application**.
-
-
-
-
-
 ## Stats
 
 ![GitHub forks](https://img.shields.io/github/forks/alexa-dev-hub/alexa-community-jaipur?style=social)
@@ -54,16 +32,48 @@ Backend is on Heroku
 ![GitHub last commit](https://img.shields.io/github/last-commit/alexa-dev-hub/alexa-community-jaipur)
 
 
+## Stack Used: MERN.
+
+The website stands on the <b>MERN</b> architecture. <br>
+You can find the front-end part within the [_client_](https://github.com/alexa-dev-hub/alexa-community-jaipur/tree/master/client) folder. 
+
+## Development Guidelines
+We have shifted our codebase **from Heroku to Netlify** and now have decoupled Backend and Frontend branches.
+This helps us to maintain code more easily. We follow modular coding practices.
+
+<img src="https://user-images.githubusercontent.com/53480076/95044924-5906a680-06fe-11eb-8d63-b9d7a8dcdac2.png">
+
+### Note
+#### Frontend is hosted on Netlify.
+#### Backend is on Heroku.
+
+1. All changes regarding **FrontEnd** should be made in `master`. For contributors, if you are working on **frontend**, you need to send PR on `master` branch.
+2. All changes regarding **BackEnd** should be made in `v1-deployment`. For contributors, if you are working on **backend**, you need to send PR on `v1-deployment` branch.
+#### [IMPORTANT] Maintainers, DO NOT merge these two branches `master` and `v1-deployment`. This would lead to **kill of application**.
+
+
 ## Steps to get you started:
 
+## FOR WORKING ON THE FRONTEND ONLY (Client Side - REACTJS)
 Before moving forward, make sure you are aware of the MERN stack and have the necessary libraries and packages installed.  <br>
 React is built using the create-react-app package for your knowledge.  <br>
 - If you want to start learning React go through the [documentation](https://reactjs.org/docs/getting-started.html)
 
 Follow these steps to run the website locally.
 - Clone the repo using terminal, giving this command `git clone https://github.com/alexa-dev-hub/alexa-community-jaipur.git`.
-- Then type `cd alexa-community-jaipur`.
+- Here you would be on the `master` branch already.
+- Go inside client folder. `cd client`.
+- Run `npm install`.
+- Run `npm start`.
+- Should run on `http://localhost:3000`.
+- The backend APIs being hit are already hosted on Heroku and you need not to setup your server locally. With the above steps you are good to go.
+- Make changes and updates.
+- Make a PR to master.
 
+## FOR WORKING ON THE BACKEND ONLY (Server Side - NODE/EXPRESS/MONGO)
+Follow these steps to run the Server locally.
+- Clone and browse to the project's directory.
+- Switch Branch to `v1-deployment` by `git checkout origin/v1-deployment`.
 **Before moving to the next steps, first put up the MONGO_DB_URI.**
 
 - Inside the _config_ folder, add a file named _devkeys.js_.
@@ -75,21 +85,14 @@ const MONGO_DB_URI =
 
 module.exports = { MONGO_DB_URI };
 ```
-
 - The above URI is just a sample. You will get a different URI when you connect your cluster to an application. It is advised you create new credentials and a new DB for working. You will then replace these details in the URI, namely < username >, < password > and < dbname >.
 - Also make sure to **whitelist your IP address** in the cluster's **Network Access Tab** on MongoDB Atlas. You can allow traffic from all by putting in `0.0.0.0/0` too, for development purposes. 
 
-**Now proceed forward:**
+- Run `npm install`.
+- Start with `npm run server` or `npm run server-dev`.  
+This will start the server and you can test it using POSTMAN etc. to work and develop.
+- This branch also has an **outdated client** folder. We recommend not to make changes to this, although you can run the whole app (outdated client + server) using `npm run dev`.
 
-- Now if you have nodemon installed then type `npm run dev` to start the development backend server.
-- You will see the server starts at your localhost, port 5000.
-- Now open another terminal and browse to the same folder.
-- Now type `cd client` to move into the client folder (React).
-- We will run the backend and frontend separately.
-- Then type `npm run start` to begin the React local server.
-- Goto `http://localhost:3000`, to see the website up and running.
-- You may have to change the the API Url to direct at the backend local port.
-- Explanation on client-side is in this [README](https://github.com/alexa-dev-hub/alexa-community-jaipur/blob/master/client/README.md)
 
 ## Good for?	:grinning:
 
@@ -102,7 +105,7 @@ The website requires a whole new fresher look. We would love to see your _creati
 
 ## Regarding Deployment to Production :rocket:
 
-The website has been enabled with automatic deployments on **Heroku** (See Environments) from the master branch, make sure you do not leave any critical merge conflicts whenever you leave a PR.
+The website has been enabled with automatic deployments on **Heroku** (Server Side from `v1-deployments`) and on **Netlify** (Client-side from `master`), make sure you do not leave any critical merge conflicts whenever you leave a PR.
 
 ## Want to be a part of Alexa Community, Jaipur. :handshake:
 Follow us on 
