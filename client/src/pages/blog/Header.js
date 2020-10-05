@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const { sections, title } = props;
+  const { sections } = props;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
 
@@ -71,35 +71,40 @@ export default function Header(props) {
 
   return (
     <React.Fragment>
-      <AppBar position='fixed'>
+      <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
           <Button
-            size='small'
-            variant='contained'
-            href='https://github.com/tarunnsingh/alexa-community-jaipur'
+            size="small"
+            variant="contained"
+            href="https://github.com/tarunnsingh/alexa-community-jaipur"
           >
             <span>
-              <FontAwesomeIcon icon={faGithub} size='lg' />
+              <FontAwesomeIcon icon={faGithub} size="lg" />
             </span>
           </Button>
           <Typography
-            component='h2'
-            variant='h5'
-            color='inherit'
-            align='center'
+            component="h3"
+            variant="h6"
+            color="inherit"
+            align="center"
             noWrap
             className={classes.toolbarTitle}
           >
-            <img src={logo} alt='logo-header' className={classes.image} />
-            {title}
+            <div id="logo">
+              <div id="covering"></div>
+              <div id="logoimgbox">
+                <img id="logo-img" src={logo} alt="alexa-logo" />
+              </div>
+              <div id="logo-text">alexa dev hub</div>
+            </div>
           </Typography>
 
-          <Button size='small' onClick={handleMenu}>
+          <Button size="small" onClick={handleMenu}>
             Blog
             <ArrowDropDownIcon />
           </Button>
           <Menu
-            id='menu-appbar'
+            id="menu-appbar"
             anchorEl={anchorEl}
             anchorOrigin={{
               vertical: "top",
@@ -117,7 +122,7 @@ export default function Header(props) {
             <MenuItem onClick={handleClose}>Blog 2</MenuItem>
           </Menu>
 
-          <Button variant='contained' size='small' className={classes.button}>
+          <Button variant="contained" size="small" className={classes.button}>
             Login
           </Button>
           {/* <Button variant='contained' size='small' className={classes.button}>
@@ -127,16 +132,16 @@ export default function Header(props) {
       </AppBar>
       <div style={{ marginTop: "70px" }}>
         <Toolbar
-          component='nav'
-          variant='dense'
+          component="nav"
+          variant="dense"
           className={classes.toolbarSecondary}
         >
           {sections.map((section) => (
             <Link
-              color='inherit'
+              color="inherit"
               noWrap
               key={section.title}
-              variant='body2'
+              variant="body2"
               href={section.url}
               className={classes.toolbarLink}
             >

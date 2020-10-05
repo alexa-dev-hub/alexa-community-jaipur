@@ -1,0 +1,149 @@
+/* several different options here for fonts, set '$font-family' to whichever you prefer */
+
+$font-family-neutral: "Oxygen", sans-serif;
+$font-family-fancy: "Sansita Swashed", cursive;
+$font-family-futuristic: "Orbitron", sans-serif;
+
+@import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.eot");
+  src: url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.svg#Amazon Ember")
+      format("svg");
+}
+
+$font-family-amazon: "Amazon Ember";
+
+$font-family: $font-family-amazon;
+
+$text-color-final: #29b6f6;
+$logo-height: 2.7em;
+$border-radius: $logo-height/2;
+$text-font-size: $logo-height - 1.2em;
+$background-color: whiteSmoke;
+$animation-duration: 3s;
+$text-animation-duration: $animation-duration + 0.5;
+$animation-iterations: 1;
+
+body {
+  background-color: black;
+  /*dark background to show size of the logo*/
+}
+
+#logo {
+  height: contain;
+  width: contain;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background-color: $background-color;
+  height: $logo-height;
+}
+
+#logo-img {
+  display: inline-block;
+  height: 100%;
+  /*change width value for final product*/
+  width: $logo-height;
+  z-index: 2;
+  vertical-align: middle;
+  position: relative;
+  animation-name: logo-img-animation;
+  animation-duration: $animation-duration;
+  animation-iteration-count: $animation-iterations;
+}
+
+@keyframes logo-img-animation {
+  0% {
+    top: 0;
+    transform: rotateZ(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotateZ(-360deg);
+  }
+}
+
+#logo-text {
+  /*change font-size value for final product*/
+  font-size: $text-font-size;
+  color: $text-color-final;
+  z-index: -1;
+  top: 0;
+  font-family: $font-family;
+  display: inline-block;
+  vertical-align: middle;
+  animation-name: logo-text-animation;
+  animation-duration: $text-animation-duration;
+  animation-iteration-count: $animation-iterations;
+  opacity: 1;
+}
+
+@keyframes logo-text-animation {
+  0% {
+    color: black;
+    top: 0;
+  }
+  80% {
+    color: black;
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+#covering {
+  z-index: 1;
+  top: 0;
+  background-color: $background-color;
+  height: 100%;
+  width: 0;
+  display: inline-block;
+  position: absolute;
+  animation-name: covering-animation;
+  animation-duration: $animation-duration;
+  animation-iteration-count: $animation-iterations;
+}
+
+#logoimgbox {
+  z-index: 1;
+  top: 0;
+  position: relative;
+  background-color: $background-color;
+  display: inline-block;
+  height: 100%;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  width: $logo-height;
+  animation-name: logoimgbox-animation;
+  animation-duration: $animation-duration;
+  animation-iteration-count: $animation-iterations;
+}
+@keyframes logoimgbox-animation {
+  0% {
+    left: 100%;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes covering-animation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
