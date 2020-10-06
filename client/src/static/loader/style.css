@@ -1,231 +1,329 @@
 :root {
-	--color-black: #000;
-	--color-white: #fff;
-	--color-brand-1: #3be0ec;
-	--color-brand-2: #5eaefd;
-	--color-brand-3: #073063;
-	--color-dark: var(--color-brand-3);
-	--color-light:  var(--color-brand-1);
+  --color-black: #000;
+  --color-white: #fff;
+  --color-brand-1: #3be0ec;
+  --color-brand-2: #2bb6f5;
+  --color-brand-3: #073063;
+  --color-dark: var(--color-brand-3);
+  --color-light: var(--color-brand-1);
 }
 
 *,
 *:after,
 :before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-	position: relative;
+  position: relative;
 }
 
 svg {
-	min-width: 10rem;
-	max-height: 10rem;
-	margin: 2rem;
-	display: inline-block;
+  min-width: 10rem;
+  max-height: 10rem;
+  margin: 1rem;
+  display: inline-block;
+  overflow: visible;
 }
 
-@keyframes circle {
-	to {
-		stroke-dashoffset: 0;
-	}
+@keyframes pathDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
-@keyframes circle-hide {
-	to {
-		opacity: 0;
-	}
+@keyframes pathDrawFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  60% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-@keyframes cloud {
-	to {
-		stroke-dashoffset: 0;
-	}
+@keyframes pathHide {
+  to {
+    opacity: 0;
+  }
 }
-@keyframes line {
-	0% {
-		stroke-dashoffset: 1850;
-	}
-	100% {
-		stroke-dashoffset: 940;
-	}
+@keyframes loaderLine {
+  0% {
+    stroke-dashoffset: 3000;
+  }
+  100% {
+    stroke-dashoffset: 995;
+  }
 }
-@keyframes spin {
-	0% {
-		transform: rotate(-90deg) translate3d(0, 0, 0);
-	}
-	100% {
-		transform: rotate(270deg) translate3d(0, 0, 0);
-	}
+@keyframes loaderSpin {
+  0% {
+    transform: rotate(-90deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(270deg) translate3d(0, 0, 0);
+  }
 }
-
+@keyframes loaderPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  90% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+}
 /*** SWITCH THEME ***/
 .theme-container {
-	width: 100%;
-	height: 100%;
-	padding: 2rem;
-	position: absolute;
-	display: flex;
-	background-color: var(--color-black);
-	transition: 0.4s;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  display: flex;
+  background-color: var(--color-black);
+  transition: 0.4s;
 }
-
 .theme-container.light {
-	background-color: var(--color-white);
+  background-color: var(--color-white);
 }
 
 .switch {
-	width: 7rem;
-	height: 3rem;
-	display: inline-block;
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
+  width: 5rem;
+  height: 2.5rem;
+  display: inline-block;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
-
 .switch .theme-switcher {
-	width: 2rem;
-	height: 2rem;
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translate(0, -50%);
-	opacity: 0;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  opacity: 0;
+}
+.switch .theme-switcher:checked + .slider:before {
+  left: initial;
+  right: 0.5rem;
+  background-color: var(--color-light);
+}
+.switch .slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-brand-2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.switch .slider:before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: var(--color-dark);
+  transition: 0.4s;
+}
+.switch .slider.round {
+  border-radius: 34px;
+}
+.switch .slider.round:before {
+  border-radius: 50%;
 }
 
-.slider {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: var(--color-brand-2);
-	transition: 0.4s;
-	cursor: pointer;
+/*** LOADER 0 ***/
+[data-name="loader-0"] path {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 4;
+  stroke-linecap: round;
 }
-
-.slider:before {
-	content: "";
-	width: 2rem;
-	height: 2rem;
-	display: inline-block;
-	position: absolute;
-	left: 0.5rem;
-	top: 50%;
-	transform: translate(0, -50%);
-	background-color: var(--color-dark);
-	transition: 0.4s;
+[data-name="loader-0"] path[data-name="cloud"] {
+  stroke-width: 5;
 }
-
-.theme-switcher:checked + .slider:before {
-	left: initial;
-	right: 0.5rem;
-	background-color: var(--color-light);
+[data-name="loader-0"] path[data-name="cloud-light"] {
+  stroke-width: 6;
+  stroke: var(--color-white);
 }
-
-/* Rounded sliders */
-.slider.round {
-	border-radius: 34px;
+[data-name="loader-0"].loader-anim path[data-name="circle-1"] {
+  animation: pathDraw 1s linear 0s forwards, pathHide 0.5s linear 1s forwards;
 }
-
-.slider.round:before {
-	border-radius: 50%;
+[data-name="loader-0"].loader-anim path[data-name="circle-2"] {
+  animation: pathDraw 1s linear 0.7s forwards, pathHide 0.5s linear 2.2s forwards;
+}
+[data-name="loader-0"].loader-anim path[data-name="circle-3"] {
+  animation: pathDraw 1s linear 1s forwards, pathHide 0.5s linear 1.8s forwards;
+}
+[data-name="loader-0"].loader-anim path[data-name="circle-4"] {
+  animation: pathDraw 1s linear 0.5s forwards, pathHide 0.5s linear 2s forwards;
+}
+[data-name="loader-0"].loader-anim path[data-name="cloud-light"] {
+  animation: pathDraw 2.2s linear 1.5s forwards;
 }
 
 /*** LOADER 1 ***/
-[data-name="loader-1"] {
-	overflow: visible;
-}
 [data-name="loader-1"] path {
-	fill: none;
-	stroke-miterlimit: 10;
-	stroke-width: 3;
-	stroke-linecap: round;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 4;
+  stroke-linecap: round;
 }
-.loader-anim[data-name="loader-1"] path[data-name="circle-1"] {
-	animation: circle 1s linear 0s forwards, circle-hide 0.5s linear 1s forwards;
+[data-name="loader-1"] path[data-name="cloud"] {
+  stroke-width: 5;
 }
-.loader-anim[data-name="loader-1"] path[data-name="circle-2"] {
-	animation: circle 1s linear 0.7s forwards,
-		circle-hide 0.5s linear 2.2s forwards;
+[data-name="loader-1"] path[data-name="cloud-light"] {
+  stroke-width: 6;
+  stroke: var(--color-white);
 }
-.loader-anim[data-name="loader-1"] path[data-name="circle-3"] {
-	animation: circle 1s linear 1s forwards, circle-hide 1s linear 1.8s forwards;
+[data-name="loader-1"].loader-anim path[data-name="circle-1"] {
+  animation: pathDrawFade 2s linear 0s infinite forwards;
 }
-.loader-anim[data-name="loader-1"] path[data-name="circle-4"] {
-	animation: circle 1s linear 0.5s forwards,
-		circle-hide 0.5s linear 2s forwards;
+[data-name="loader-1"].loader-anim path[data-name="circle-2"] {
+  animation: pathDrawFade 2s linear 0.7s infinite forwards;
 }
-.loader-anim[data-name="loader-1"] path[data-name="cloud"] {
-	stroke-width: 4;
-	animation: cloud 2s linear 2s forwards;
+[data-name="loader-1"].loader-anim path[data-name="circle-3"] {
+  animation: pathDrawFade 2s linear 1s infinite forwards;
 }
-.loader-anim[data-name="loader-1"] path[data-name="cloud-light"] {
-	stroke-width: 6;
-	stroke: var(--color-white);
-	animation: cloud 2.2s linear 1.5s forwards;
+[data-name="loader-1"].loader-anim path[data-name="circle-4"] {
+  animation: pathDrawFade 2s linear 0.5s infinite forwards;
 }
-
-.theme-container.light [data-name="loader-1"] path[data-name="cloud-light"] {
-	stroke: var(--color-brand-1);
+[data-name="loader-1"].loader-anim path[data-name="cloud"] {
+  animation: pathDraw 3s linear 2.5s infinite forwards;
+}
+[data-name="loader-1"].loader-anim path[data-name="cloud-light"] {
+  animation: pathDraw 3.5s linear 3s infinite forwards;
 }
 
 /*** LOADER 2 ***/
-[data-name="loader-2"] {
-	overflow: visible;
-}
 [data-name="loader-2"] path {
-	fill: none;
-	stroke-miterlimit: 10;
-	stroke-width: 3;
-	stroke-linecap: round;
+  fill: none;
+  stroke: var(--color-brand-1);
+  stroke-miterlimit: 10;
+  stroke-width: 4;
+  stroke-linecap: round;
 }
-.loader-anim[data-name="loader-2"] path[data-name="circle-1"] {
-	animation: circle 2s linear 0s forwards;
+[data-name="loader-2"] path[data-name="cloud"] {
+  stroke-width: 4;
 }
-.loader-anim[data-name="loader-2"] path[data-name="circle-2"] {
-	animation: circle 2s linear 2s forwards;
+[data-name="loader-2"] path[data-name="cloud-light"] {
+  stroke-width: 6;
+  stroke: var(--color-white);
 }
-.loader-anim[data-name="loader-2"] path[data-name="circle-3"] {
-	animation: circle 2s linear 1.5s forwards;
+[data-name="loader-2"].loader-anim path[data-name="circle-1"] {
+  animation: pathDrawFade 8s linear 1s infinite forwards;
 }
-.loader-anim[data-name="loader-2"] path[data-name="circle-4"] {
-	animation: circle 2s linear 2.5s forwards;
+[data-name="loader-2"].loader-anim path[data-name="circle-2"] {
+  animation: pathDrawFade 8s linear 2s infinite forwards;
 }
-.loader-anim[data-name="loader-2"] path[data-name="cloud"] {
-	stroke-width: 4;
-	animation: cloud 3s linear 4s forwards;
+[data-name="loader-2"].loader-anim path[data-name="circle-3"] {
+  animation: pathDrawFade 8s linear 1.5s infinite forwards;
 }
-.loader-anim[data-name="loader-2"] path[data-name="cloud-light"] {
-	stroke-width: 6;
-	stroke: var(--color-white);
-	animation: cloud 3.2s linear 4.5s forwards;
+[data-name="loader-2"].loader-anim path[data-name="circle-4"] {
+  animation: pathDrawFade 8s linear 1.8s infinite forwards;
 }
-.theme-container.light [data-name="loader-2"] path[data-name="cloud-light"] {
-	stroke: var(--color-brand-1);
+[data-name="loader-2"].loader-anim path[data-name="line"] {
+  animation: pathDrawFade 8s linear 2.4s infinite forwards;
 }
 
 /*** LOADER 3 ***/
-[data-name="loader-3"] {
-	transform: scale(1.5);
-}
 [data-name="loader-3"] circle {
-	fill: none;
-	stroke-miterlimit: 10;
-	stroke-width: 4;
-	stroke-linecap: round;
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 6;
+  stroke-linecap: round;
 }
-[data-name="loader-3"] .back {
-	stroke: var(--color-brand-3);
+[data-name="loader-3"] circle[data-name="back"] {
+  stroke: var(--color-brand-3);
+}
+[data-name="loader-3"] circle[data-name="forward"] {
+  stroke-width: 10;
+  stroke-dasharray: 1000;
+  transform-origin: 50% 50%;
+}
+[data-name="loader-3"].loader-anim circle[data-name="forward"] {
+  animation: loaderLine 10s linear infinite, loaderSpin 9s linear infinite;
 }
 
-.loader-anim[data-name="loader-3"] .forward {
-	stroke-width: 6;
-	stroke-dasharray: 465;
-	animation: line 10s linear infinite, spin 9s linear infinite;
-	transform-origin: 50% 50%;
+/*** LOADER 4 ***/
+[data-name="loader-4"] path {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+}
+[data-name="loader-4"].loader-anim path[data-name="circle-1"] {
+  animation: loaderPulse 4s linear 0s infinite both;
+}
+[data-name="loader-4"].loader-anim path[data-name="circle-2"] {
+  animation: loaderPulse 4s linear 1s infinite both;
+}
+[data-name="loader-4"].loader-anim path[data-name="circle-3"] {
+  animation: loaderPulse 4s linear 1.5s infinite both;
+}
+[data-name="loader-4"].loader-anim path[data-name="circle-4"] {
+  animation: loaderPulse 8s linear 2s infinite both;
+}
+
+/*** LOADER 5 ***/
+[data-name="loader-5"] path {
+  fill: none;
+  stroke-width: 3;
+  stroke: var(--color-brand-1);
+}
+[data-name="loader-5"].loader-anim path[data-name="logo"] {
+  animation: pathDrawFade 10s linear infinite both;
+}
+
+.theme-container.light .switch .slider {
+  background-color: var(--color-brand-3);
+}
+.theme-container.light [data-name="loader-0"] path[data-name="cloud-light"] {
+  stroke: var(--color-brand-2);
+}
+.theme-container.light [data-name="loader-1"] path[data-name="cloud-light"] {
+  stroke: var(--color-brand-2);
+}
+.theme-container.light [data-name="loader-2"] path[data-name="cloud-light"] {
+  stroke: var(--color-brand-2);
+}
+.theme-container.light [data-name="loader-3"] circle[data-name="forward"] {
+  stroke: var(--color-brand-2);
+}
+.theme-container.light [data-name="loader-5"] path {
+  stroke: var(--color-brand-2);
 }

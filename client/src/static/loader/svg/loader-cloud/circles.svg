@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="267.63" height="167.99" viewBox="0 0 267.63 167.99">
+  <title>circles</title>
+  <g id="b60893e7-7fe8-43ae-a83a-c72921ecea5b" data-name="Capa 1">
+    <circle cx="101.63" cy="83.08" r="49.5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <circle cx="217.12" cy="117.48" r="49.5" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <circle cx="51.02" cy="116.97" r="50.02" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <circle cx="167.78" cy="66.44" r="65.44" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <g id="b96d3197-2dee-4fe9-a9e5-54f1e0160999" data-name="Capa 2">
+    <path d="M110.71,34.41a49.51,49.51,0,1,1-9.08-.84,49.51,49.51,0,0,1,9.08.84" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M233.22,70.65A49.55,49.55,0,1,1,217.12,68a49.53,49.53,0,0,1,16.1,2.67" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M54.77,67.09A50,50,0,1,1,51,67c1.26,0,2.51,0,3.75.14" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M110.71,34.4a65.45,65.45,0,1,1-8.37,32,65.42,65.42,0,0,1,8.37-32" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>
