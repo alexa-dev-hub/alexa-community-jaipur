@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Logo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+
+  @font-face {
+      font-family: 'Amazon Ember';
+      src: url('font/amazonember_rg-webfont.woff2') format('woff2'),
+           url('font/amazonember_rg-webfont.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+
+  }
+
+  body {
+    background-color: black;
+    /*dark background to show size of the logo*/
+  }
+
+  #logo {
+    padding: 1em;
+    height: contain;
+    width: contain;
+    padding-right: 8em;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-color: #fafafa;
+    height: 8em;
+  }
+
+  #logo-img {
+    display: inline-block;
+    height: 100%;
+    /*change width value for final product*/
+    width: 8em;
+    z-index: 2;
+    vertical-align: middle;
+    position: relative;
+    animation-play-state: paused;
+    animation-name: logo-img-animation;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes logo-img-animation {
+    0% {
+      top: 0;
+      transform: rotateZ(0deg);
+    }
+    100% {
+      top: 0;
+      transform: rotateZ(-360deg);
+    }
+  }
+  #logo-text {
+    /*change font-size value for final product*/
+    font-size: 5em;
+    color: #29b6f6;
+    z-index: -1;
+    top: 0;
+    font-family: "Amazon Ember";
+    display: inline-block;
+    vertical-align: middle;
+    animation-name: logo-text-animation;
+    animation-play-state: paused;
+    animation-duration: 3.5s;
+    animation-iteration-count: 1;
+    opacity: 1;
+  }
+
+  @keyframes logo-text-animation {
+    0% {
+      color: black;
+      top: 0;
+    }
+    80% {
+      color: black;
+      top: 0;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  #covering {
+    z-index: 1;
+    top: 0;
+    background-color: #fafafa;
+    height: 100%;
+    width: 0;
+    display: inline-block;
+    position: absolute;
+    animation-name: covering-animation;
+    animation-play-state: paused;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+
+  #logoimgbox {
+    z-index: 1;
+    top: 0;
+    position: relative;
+    background-color: #fafafa;
+    display: inline-block;
+    height: 100%;
+    border-top-right-radius: 4em;
+    border-bottom-right-radius: 4em;
+    width: 8em;
+    animation-name: logoimgbox-animation;
+    animation-play-state: paused;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes logoimgbox-animation {
+    0% {
+      left: 100%;
+      top: 0;
+    }
+    100% {
+      left: 0;
+      top: 0;
+    }
+  }
+  @keyframes covering-animation {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  </style>
+
+</head>
+<body>
+
+
+<div id = "logo">
+<div id="covering"></div>
+<div id = "logoimgbox"><img id = "logo-img" src="../logo192.png"/></div>
+<div id = "logo-text">alexa dev hub</div></div>
+
+<!--Make the animation start only when the page has loaded -->
+<script>
+  $(document).ready(function() {
+  $("#logo-img").css("animation-play-state","running");
+  $("#covering").css("animation-play-state","running");
+  $("#logoimgbox").css("animation-play-state","running");
+  $("#logo-text").css("animation-play-state","running");
+  });
+ </script>
+</body>
+</html>
