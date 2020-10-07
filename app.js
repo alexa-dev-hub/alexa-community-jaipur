@@ -3,13 +3,16 @@ const morgan = require("morgan");
 const chalk = require("chalk");
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
+const cors = require('cors')
 
 const app = express();
+app.use(cors())
 const PORT = process.env.PORT || 5000;
 
 const userRouter = require("./routes/User");
 const postRouter = require("./routes/Post");
 const eventsRouter = require("./routes/Events");
+
 
 app.use(express.json());
 app.use(morgan("tiny"));
