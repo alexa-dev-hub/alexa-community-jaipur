@@ -1,21 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import GitHubIcon from "@material-ui/icons/GitHub";
 
-import links from '../links/links'
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import Header from "./Header";
-import MainFeaturedPost from "./MainFeaturedPost";
-import FeaturedPost from "./FeaturedPost";
-import Main from "./Main";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
-import blogService from "../../services/blogpost";
-import bannerLink from "../../static/banner.png";
+//importing  links
+import links from '../../data/defaults/links/links'
+
+//importing holders and components
+import Header from "../../components/header/Header";
+import MainFeaturedPost from "../../components/holders/MainFeaturedPost";
+import FeaturedPost from "../../components/holders/FeaturedPost";
+import Main from "../../components/holders/Main";
+import Sidebar from "../../components/holders/Sidebar";
+import Footer from "../../components/footer/Footer";
+
+// importing hooks
+import useFetchPosts from '../../data/hooks/';
+
+//importing default data
+import mainFeaturedPost from '../../data/defaults/mainfeatured';
+import featuredPosts from '../../data/defaults/featuredposts';
+import sidebar from '../../data/defaults/sidebarWebinars';
+
+
+
+
 const useStyles = makeStyles((theme) => ({
   mainGrid: {
     marginTop: theme.spacing(3),
@@ -24,88 +34,14 @@ const useStyles = makeStyles((theme) => ({
 
 const sections = [{ title: "Alexa Skills", url: "#" }];
 
-const mainFeaturedPost = {
-  title: "Welcome! Alexa Community - Jaipur",
-  description:
-    "Alexa Dev Hub aims to provide resources and learning content all in one place to boost up your VUI developemnt skills. ",
-  image: `${bannerLink}`,
-  imgText: "main image description",
-};
-
-const featuredPosts = [
-  {
-    title: "Upcoming Events",
-    date: "Early July 2020",
-    type: "Webinar",
-    description:
-      "We are planning to take our first technical webinar next month. Do let us know what would you like to learn.",
-    suggestionPlaceholder: "Suggest you topics here...",
-    image: "/api/events/upcomingevent.png",
-    imageText: "Logo",
-    buttonText: "Register",
-    buttonDisable: true,
-  },
-  {
-    title: "Past Events",
-    date: "30th April 2020",
-    description:
-      "Workshop on Making Alexa Skills for beginners. We learnt how to make a basic skill using Alexa Console.",
-    feedback: "Leave your feedback...",
-    image: "/api/events/pastevent.png",
-    imageText: "Logo",
-    buttonText: "Check Blog Post",
-    buttonDisable: true,
-  },
-];
-
-const sidebar = {
-  webinar: [
-    {
-      title: "Tarun Singh @ GirlScript Summit, AP.",
-      description:
-        "A session where you learn all the basics of Alexa, it's functioning, architecture, terminology and also create a Skill.",
-      url: links.webinar1,
-      date: "Aug-29-2020",
-    },
-  ],
-
-  archives: [
-    { title: "Install Alexa CLI", url: "#" },
-    { title: "Create Skill using ASK CLI", url: "#" },
-    { title: "Make API Skill", url: "#" },
-    { title: "Intent Chaining", url: "#" },
-    { title: "How to use Alexa Skill from Template", url: "usingtemplate" },
-  ],
-  social: [
-    {
-      name: "GitHub",
-      icon: GitHubIcon,
-      url: links.github,
-    },
-    {
-      name: "LinkedIn",
-      icon: LinkedInIcon,
-      url: links.linkedin,
-    },
-    {
-      name: "Instagram",
-      icon: InstagramIcon,
-      url: links.instagram,
-    },
-  ],
-};
 
 export default function Blog() {
+
+  const posts =  useFetchPosts();
+
   const classes = useStyles();
-  const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    blogService.fetchPosts().then((data) => {
-      const { content } = data;
-      setPosts(content);
-    });
-  }, []);
-
+  console.log(posts);
   return (
     <React.Fragment>
       <CssBaseline />
