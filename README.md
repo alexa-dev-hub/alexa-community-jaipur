@@ -54,9 +54,16 @@ This helps us to maintain code more easily. We follow modular coding practices.
 
 ## Steps to get you started:
 
-## FOR WORKING ON THE FRONTEND ONLY (Client Side - REACTJS)
+<a href="#FONLY" title="Jump to Steps on Fronted Development">1. Work on FRONTEND ONLY.</a>  
+<a href="#BONLY" title="Jump to Steps on Backend Development">2. Work on BACKEND ONLY.</a>  
+<a href="#FBONLY" title="Jump to Steps on Both">3. Work on (FRONTEND + BACKEND).</a>  
+
+
+<h2 id="FONLY">🧑‍🎨 FOR WORKING ON THE FRONTEND ONLY (Client Side)</h2>  
+
 Before moving forward, make sure you are aware of the MERN stack and have the necessary libraries and packages installed.  <br>
-React is built using the create-react-app package for your knowledge.  <br>
+React is built using the create-react-app package for your knowledge.  
+<br>
 - If you want to start learning React go through the [documentation](https://reactjs.org/docs/getting-started.html)
 
 Follow these steps to run the website locally.
@@ -70,10 +77,12 @@ Follow these steps to run the website locally.
 - Make changes and updates.
 - Make a PR to master.
 
-## FOR WORKING ON THE BACKEND ONLY (Server Side - NODE/EXPRESS/MONGO)
+<h2 id="BONLY">🧑‍🔧 FOR WORKING ON THE BACKEND ONLY (Server Side)</h2>  
+
 Follow these steps to run the Server locally.
 - Clone and browse to the project's directory.
-- Switch Branch to `v1-deployment` by `git checkout origin/v1-deployment`.  
+- Switch Branch to `v1-deployment` by `git checkout origin/v1-deployment`. 
+
 **Before moving to the next steps, first put up the MONGO_DB_URI.**
 
 > - Inside the _config_ folder, add a file named _devkeys.js_.
@@ -85,14 +94,29 @@ const MONGO_DB_URI =
 
 module.exports = { MONGO_DB_URI };
 ```
+
 > - The above URI is just a sample. You will get a different URI when you connect your cluster to an application. It is advised you create new credentials and a new DB for working. You will then replace these details in the URI, namely < username >, < password > and < dbname >.
 > - Also make sure to **whitelist your IP address** in the cluster's **Network Access Tab** on MongoDB Atlas. You can allow traffic from all by putting in `0.0.0.0/0` too, for development purposes. 
 
 - Run `npm install`.
 - Start with `npm run server` or `npm run server-dev`.  
 This will start the server and you can test it using POSTMAN etc. to work and develop.
-- This branch also has an **outdated client** folder. We recommend not to make changes to this, although you can run the whole app (outdated client + server) using `npm run dev`.
 
+<h2 id="FBONLY">🧑‍🎨 + 🧑‍🔧 FOR WORKING ON FRONTEND + BACKEND</h2>  
+
+Follow the above steps to setup your environment to get started with the backend.
+
+**AFTER FORKING** this repo, open two Terminals/CMD on your local machine.  
+One will run the frontend and the other will run the backend.
+
+For Frontend, Clone the `master` branch, using:  
+`$ git clone -b master --single-branch https://github.com/<username>/alexa-community-jaipur`  
+
+For Backend, Clone  the `v1-deployment` branch, using the following in the other terminal.  
+`$ git clone -b v1-deployment --single-branch https://github.com/<username>/alexa-community-jaipur`
+
+*Replace \<username\> with your GitHub Username.*
+ 
 
 ## Good for?	:grinning:
 
