@@ -58,10 +58,10 @@ There are 2 branches which are automatically created:
 As decribed above inside your folder structure, go to 'lambda' folder which has the following contents:
 
 _If you selected NodeJS_  
-<img src="/api/posts/images/nodejs-folder-structure.JPG" width="30%">
+<img src="https://alexadevhub.herokuapp.com/api/posts/images/nodejs-folder-structure.JPG" width="30%">
 
 _If you selected Python_  
-<img src="/api/posts/images/pyhton-folder-structure.JPG" width="30%">
+<img src="https://alexadevhub.herokuapp.com/api/posts/images/pyhton-folder-structure.JPG" width="30%">
 
 This is a basic structure of any project which has an entry point as index.js (NodeJS) or lambda_function.py (Python) and a list of dependencies and meta information which help in runnning the program as in package.json (NodeJS) or requirements.txt (Python).
 
