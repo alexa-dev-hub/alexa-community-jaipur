@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { Link as ScrollLink } from "react-scroll";
 import Iframe from "react-iframe";
-import links from '../links/links'
+import links from '../../data/defaults/links/links'
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
     padding: theme.spacing(2),

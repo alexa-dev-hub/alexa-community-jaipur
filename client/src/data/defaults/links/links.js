@@ -7,7 +7,7 @@ const links = {
     v2_website:'https://alexadevhub.netlify.app/',
     webinar1:'https://www.youtube.com/embed/vOZGa6WJQoE',
     contributors:'https://api.github.com/repos/alexa-dev-hub/alexa-community-jaipur/contributors',
-    api:'http://alexadevhub.herokuapp.com',
+    api:'https://alexadevhub.herokuapp.com',
     corsValidator:'https://cors-anywhere.herokuapp.com/'
 }
 export default links;
