@@ -1,4 +1,4 @@
-import links from './links/links'
+
 const featuredPosts = [
     {
       title: "Upcoming Events",
