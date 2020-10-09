@@ -16,5 +16,9 @@ postRouter.get("/images/:imageName", (req, res) => {
   const filePath = `./images/${imageName}`;
   res.sendFile(filePath, { root: __dirname });
 });
-
+postRouter.get("/images/events/:imageName", (req, res) => {
+  const imageName = req.params.imageName;
+  const filePath = `./images/eventImages/${imageName}`;
+  res.sendFile(filePath, { root: __dirname });
+});
 module.exports = postRouter;
