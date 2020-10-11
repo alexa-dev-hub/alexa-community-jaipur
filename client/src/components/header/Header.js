@@ -95,7 +95,10 @@ export default function Header(props) {
               <div id="logoimgbox">
                 <img id="logo-img" src={logo} alt="alexa-logo" />
               </div>
-              <div id="logo-text">alexa dev hub</div>
+              <div id="logo-text">
+				<span>alexa</span>
+				<span>dev hub</span>
+			  </div>
             </div>
           </Typography>
 

@@ -41,8 +41,9 @@ body {
 #logo {
   height: contain;
   width: contain;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   background-color: $background-color;
   height: $logo-height;
@@ -51,14 +52,18 @@ body {
 #logo-img {
   display: inline-block;
   height: 100%;
-  /*change width value for final product*/
-  width: $logo-height;
   z-index: 2;
   vertical-align: middle;
   position: relative;
   animation-name: logo-img-animation;
   animation-duration: $animation-duration;
   animation-iteration-count: $animation-iterations;
+}
+
+@media (max-width: 500px) {
+  #logo-img {
+    height: 90%;
+  }
 }
 
 @keyframes logo-img-animation {
@@ -76,7 +81,6 @@ body {
   /*change font-size value for final product*/
   font-size: $text-font-size;
   color: $text-color-final;
-  z-index: -1;
   top: 0;
   font-family: $font-family;
   display: inline-block;
@@ -85,6 +89,30 @@ body {
   animation-duration: $text-animation-duration;
   animation-iteration-count: $animation-iterations;
   opacity: 1;
+}
+
+#logo-text >*:not(:last-child){
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  #logo-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #logo-text {
+    line-height: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #logo-text >*:not(:last-child){
+    margin-right: 0;
+  }
 }
 
 @keyframes logo-text-animation {
