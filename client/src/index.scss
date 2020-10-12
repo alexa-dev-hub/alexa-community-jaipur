@@ -40,34 +40,38 @@ body {
 
 #logo {
   height: contain;
+  height: $logo-height;
   width: contain;
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   background-color: $background-color;
-  height: $logo-height;
 }
 
 #logo-img {
   display: inline-block;
   height: 100%;
-  /*change width value for final product*/
-  width: $logo-height;
-  z-index: 2;
   vertical-align: middle;
   position: relative;
+  z-index: 2;
   animation-name: logo-img-animation;
   animation-duration: $animation-duration;
   animation-iteration-count: $animation-iterations;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 600px) {
+  #logo-img {
+    height: 90%;
+  }
 }
 
 @keyframes logo-img-animation {
   0% {
-    top: 0;
     transform: rotateZ(0deg);
   }
   100% {
-    top: 0;
     transform: rotateZ(-360deg);
   }
 }
@@ -75,68 +79,66 @@ body {
 #logo-text {
   /*change font-size value for final product*/
   font-size: $text-font-size;
-  color: $text-color-final;
-  z-index: -1;
-  top: 0;
+  color: black;
   font-family: $font-family;
   display: inline-block;
   vertical-align: middle;
   animation-name: logo-text-animation;
   animation-duration: $text-animation-duration;
   animation-iteration-count: $animation-iterations;
+  animation-fill-mode: forwards;
   opacity: 1;
+}
+
+#logo-text >*:not(:last-child){
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  #logo-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #logo-text {
+    line-height: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #logo-text >*:not(:last-child){
+    margin-right: 0;
+  }
 }
 
 @keyframes logo-text-animation {
   0% {
     color: black;
-    top: 0;
   }
   80% {
     color: black;
-    top: 0;
   }
   100% {
-    top: 0;
+	  color: $text-color-final;
   }
 }
 
 #covering {
-  z-index: 1;
-  top: 0;
-  background-color: $background-color;
   height: 100%;
-  width: 0;
+  width: 100%; 
   display: inline-block;
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: $background-color;
   animation-name: covering-animation;
   animation-duration: $animation-duration;
   animation-iteration-count: $animation-iterations;
-}
-
-#logoimgbox {
-  z-index: 1;
-  top: 0;
-  position: relative;
-  background-color: $background-color;
-  display: inline-block;
-  height: 100%;
-  border-top-right-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
-  width: $logo-height;
-  animation-name: logoimgbox-animation;
-  animation-duration: $animation-duration;
-  animation-iteration-count: $animation-iterations;
-}
-@keyframes logoimgbox-animation {
-  0% {
-    left: 100%;
-    top: 0;
-  }
-  100% {
-    left: 0;
-    top: 0;
-  }
+  animation-fill-mode: forwards;
 }
 
 @keyframes covering-animation {
@@ -145,5 +147,31 @@ body {
   }
   100% {
     width: 0;
+  }
+}
+
+#logoimgbox {
+  width: $logo-height;
+  height: 100%;
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 100%;
+  z-index: 1;
+  align-items: center;
+  background-color: $background-color;
+  border-top-right-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  animation-name: logoimgbox-animation;
+  animation-duration: $animation-duration;
+  animation-iteration-count: $animation-iterations;
+  animation-fill-mode: forwards;
+}
+@keyframes logoimgbox-animation {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
   }
 }

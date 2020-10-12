@@ -15,12 +15,14 @@ import Menu from "@material-ui/core/Menu";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
+	display: "flex",
+	justifyContent: "space-between",
     borderBottom: `1px solid ${theme.palette.divider}`,
     backgroundColor: "whiteSmoke",
     color: "black",
   },
   toolbarTitle: {
-    flex: 1,
+    flex: "inherit",
     fontFamily: "Segoe UI",
   },
   image: {
@@ -95,15 +97,18 @@ export default function Header(props) {
               <div id="logoimgbox">
                 <img id="logo-img" src={logo} alt="alexa-logo" />
               </div>
-              <div id="logo-text">alexa dev hub</div>
+              <div id="logo-text">
+				<span>alexa</span>
+				<span>dev hub</span>
+			  </div>
             </div>
           </Typography>
-
-          <Button size="small" onClick={handleMenu}>
-            Blog
-            <ArrowDropDownIcon />
-          </Button>
-          <Menu
+          <div>
+           <Button size="small" onClick={handleMenu}>
+             Blog
+             <ArrowDropDownIcon />
+           </Button>
+           <Menu
             id="menu-appbar"
             anchorEl={anchorEl}
             anchorOrigin={{
@@ -117,17 +122,18 @@ export default function Header(props) {
             }}
             open={open}
             onClose={handleClose}
-          >
-            <MenuItem onClick={handleClose}>Blog 1</MenuItem>
-            <MenuItem onClick={handleClose}>Blog 2</MenuItem>
-          </Menu>
+           >
+             <MenuItem onClick={handleClose}>Blog 1</MenuItem>
+             <MenuItem onClick={handleClose}>Blog 2</MenuItem>
+           </Menu>
 
-          <Button variant="contained" size="small" className={classes.button}>
-            Login
-          </Button>
-          {/* <Button variant='contained' size='small' className={classes.button}>
-            Logout
-          </Button> */}
+           <Button variant="contained" size="small" className={classes.button}>
+             Login
+           </Button>
+           {/* <Button variant='contained' size='small' className={classes.button}>
+             Logout
+           </Button> */}
+		 </div>
         </Toolbar>
       </AppBar>
       <div style={{ marginTop: "70px" }}>
