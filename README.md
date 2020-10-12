@@ -164,7 +164,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ManojAthreya"><img src="https://avatars2.githubusercontent.com/u/39020374?v=4" width="100px;" alt=""/><br /><sub><b>Manoj Athreya A</b></sub></a><br /><a href="#design-ManojAthreya" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/harshalkaigaonkar"><img src="https://avatars0.githubusercontent.com/u/65395607?v=4" width="100px;" alt=""/><br /><sub><b>harshal kaigaonkar</b></sub></a><br /><a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=harshalkaigaonkar" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/TheGiraffe"><img src="https://avatars1.githubusercontent.com/u/4595588?v=4" width="100px;" alt=""/><br /><sub><b>Sophia</b></sub></a><br /><a href="#design-TheGiraffe" title="Design">🎨</a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/beatrizsmerino/"><img src="https://avatars2.githubusercontent.com/u/14045148?v=4" width="100px;" alt=""/><br /><sub><b>Beatriz Sopeña Merino</b></sub></a><br /><a href="#design-beatrizsmerino" title="Design">🎨</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/beatrizsmerino/"><img src="https://avatars2.githubusercontent.com/u/14045148?v=4" width="100px;" alt=""/><br /><sub><b>Beatriz Sopeña Merino</b></sub></a><br /><a href="#design-beatrizsmerino" title="Design">🎨</a> <a href="https://github.com/alexa-dev-hub/alexa-community-jaipur/commits?author=beatrizsmerino" title="Code">💻</a></td>
   </tr>
 </table>
 
