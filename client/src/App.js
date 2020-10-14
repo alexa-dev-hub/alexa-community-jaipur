@@ -1,9 +1,9 @@
 import React from "react";
-import Blog from "./pages/blog/Blog";
+import { AppRouter } from "./AppRouter"
 function App() {
   return (
     <>
-      <Blog />
+      <AppRouter />
     </>
   );
 }

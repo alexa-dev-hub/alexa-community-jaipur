@@ -126,9 +126,8 @@ export default function Header(props) {
              <MenuItem onClick={handleClose}>Blog 1</MenuItem>
              <MenuItem onClick={handleClose}>Blog 2</MenuItem>
            </Menu>
-
-           <Button variant="contained" size="small" className={classes.button}>
-             Login
+           <Button variant="contained" size="small" className={classes.button}href="/register">
+            Register
            </Button>
            {/* <Button variant='contained' size='small' className={classes.button}>
              Logout
