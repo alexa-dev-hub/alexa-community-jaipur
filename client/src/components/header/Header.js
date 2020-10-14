@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar } from "@material-ui/core";
+import { AppBar, Avatar } from "@material-ui/core";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import CommunityLogo from "../communityLogo/communityLogo";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import logo from "../../static/logo192.png";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -15,8 +16,8 @@ import Menu from "@material-ui/core/Menu";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
-	display: "flex",
-	justifyContent: "space-between",
+    display: "flex",
+    justifyContent: "space-between",
     borderBottom: `1px solid ${theme.palette.divider}`,
     backgroundColor: "whiteSmoke",
     color: "black",
@@ -24,6 +25,12 @@ const useStyles = makeStyles((theme) => ({
   toolbarTitle: {
     flex: "inherit",
     fontFamily: "Segoe UI",
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: theme.palette.secondary.main,
+    width: theme.spacing(7),
+    height: theme.spacing(7),
   },
   image: {
     width: "40px",
@@ -75,15 +82,10 @@ export default function Header(props) {
     <React.Fragment>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-          <Button
-            size="small"
-            variant="contained"
-            href="https://github.com/tarunnsingh/alexa-community-jaipur"
-          >
-            <span>
-              <FontAwesomeIcon icon={faGithub} size="lg" />
-            </span>
-          </Button>
+          <Avatar className={classes.avatar}>
+            <CommunityLogo />
+          </Avatar>
+
           <Typography
             component="h3"
             variant="h6"
@@ -98,41 +100,46 @@ export default function Header(props) {
                 <img id="logo-img" src={logo} alt="alexa-logo" />
               </div>
               <div id="logo-text">
-				<span>alexa</span>
-				<span>dev hub</span>
-			  </div>
+                <span>alexa</span>
+                <span>dev hub</span>
+              </div>
             </div>
           </Typography>
           <div>
-           <Button size="small" onClick={handleMenu}>
-             Blog
-             <ArrowDropDownIcon />
-           </Button>
-           <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "right",
-            }}
-            open={open}
-            onClose={handleClose}
-           >
-             <MenuItem onClick={handleClose}>Blog 1</MenuItem>
-             <MenuItem onClick={handleClose}>Blog 2</MenuItem>
-           </Menu>
-           <Button variant="contained" size="small" className={classes.button}href="/register">
-            Register
-           </Button>
-           {/* <Button variant='contained' size='small' className={classes.button}>
+            <Button size="small" onClick={handleMenu}>
+              Blog
+              <ArrowDropDownIcon />
+            </Button>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>Blog 1</MenuItem>
+              <MenuItem onClick={handleClose}>Blog 2</MenuItem>
+            </Menu>
+            <Button
+              variant="contained"
+              size="small"
+              className={classes.button}
+              href="/register"
+            >
+              Login
+            </Button>
+            {/* <Button variant='contained' size='small' className={classes.button}>
              Logout
            </Button> */}
-		 </div>
+          </div>
         </Toolbar>
       </AppBar>
       <div style={{ marginTop: "70px" }}>
@@ -153,9 +160,6 @@ export default function Header(props) {
               {section.title}
             </Link>
           ))}
-          <Typography className={classes.blinker}>
-            Under Construction
-          </Typography>
         </Toolbar>
       </div>
     </React.Fragment>

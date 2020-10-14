@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -12,7 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Copyright from "../components/copyright/copyright";
 import CommunityLogo from "../components/communityLogo/communityLogo";
-
+import { MenuItem, Select, InputLabel } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -37,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
   const classes = useStyles();
+  const [role, setRole] = useState("");
+
+  const handleChange = (event) => {
+    setRole(event.target.value);
+  };
 
   return (
     <Container component="main" maxWidth="xs">
@@ -95,6 +100,22 @@ export default function SignUp() {
                 id="password"
                 autoComplete="current-password"
               />
+            </Grid>
+            <Grid item xs={12}>
+              <InputLabel id="role-choice-label" fullWidth>
+                Select Role
+              </InputLabel>
+              <Select
+                fullWidth
+                labelId="role-choice-label"
+                id="role-choice"
+                value={role}
+                onChange={handleChange}
+              >
+                <MenuItem value={"Team Member"}>Team Member</MenuItem>
+                <MenuItem value={"Chapter Lead"}>Chapter Lead</MenuItem>
+                <MenuItem value={"Community Member"}>Community Member</MenuItem>
+              </Select>
             </Grid>
             <Grid item xs={12}>
               <FormControlLabel
