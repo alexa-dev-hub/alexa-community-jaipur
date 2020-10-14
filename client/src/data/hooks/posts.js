@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import _ from 'lodash'
 import links from '../defaults/links/links';
 
-const API = `${links.api}/api/posts`
+const API = `${links.api}/api/posts`;
 
 const useFetchPosts = () => {
     const [posts, setPosts] = useState([])
