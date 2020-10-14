@@ -1,10 +1,5 @@
-let MONGO_DB_URI = "";
+require('dotenv').config();
+const MONGO_DB_URI = process.env.MONGO_DB_URI;
+const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
-if (process.env.NODE_ENV === "production") {
-  MONGO_DB_URI = process.env.MONGO_DB_URI;
-} else {
-  const devkeys = require("./devkeys");
-  MONGO_DB_URI = devkeys.MONGO_DB_URI;
-}
-
-module.exports = { MONGO_DB_URI };
+module.exports = { MONGO_DB_URI, JWT_SECRET_KEY };
