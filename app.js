@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const chalk = require("chalk");
 const mongoose = require("mongoose");
 const keys = require("./config/keys");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,7 +14,7 @@ const eventsRouter = require("./routes/Events");
 
 app.use(express.json());
 app.use(morgan("tiny"));
-
+app.use(cors())
 app.use("/api/user", userRouter);
 app.use("/api/posts", postRouter);
 app.use("/api/events", eventsRouter);
@@ -25,6 +26,10 @@ mongoose.connect(
     console.log("DB Connected");
   }
 );
+
+app.use("/", (req, res) => {
+  res.status(200).json({message : "You Reached Alexa-DEV-Hub Server."})
+})
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
