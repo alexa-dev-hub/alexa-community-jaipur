@@ -2,6 +2,7 @@ import React from "react";
 import BlogPage from "./pages/blog/Blog";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
+import Profile from "./pages/Profile";
 // import UserProfilePage from "./pages/UserProfile";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ export const AppRouter = () => {
         <Route exact path="/" component={BlogPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
+        <Route exact path="/profile" component={Profile} />
       </div>
     </Router>
   );

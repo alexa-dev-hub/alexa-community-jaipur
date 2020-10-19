@@ -1,18 +1,25 @@
-import React, { useState } from "react";
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
+import React, { useState, useRef, useEffect } from "react";
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  FormControlLabel,
+  Checkbox,
+  Grid,
+  Box,
+  Typography,
+  Container,
+  MenuItem,
+  Select,
+  InputLabel,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import Copyright from "../components/copyright/copyright";
 import CommunityLogo from "../components/communityLogo/communityLogo";
-import { MenuItem, Select, InputLabel } from "@material-ui/core";
+import AuthService from "../services/authService";
+import Alert from "../components/alert/alert";
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -35,12 +42,51 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignUp() {
-  const classes = useStyles();
-  const [role, setRole] = useState("");
+const handleOnSubmit = (e) => {
+  e.preventDefault();
+};
 
-  const handleChange = (event) => {
-    setRole(event.target.value);
+export default function SignUp(props) {
+  const classes = useStyles();
+  const [user, setUser] = useState({
+    email: "",
+    name: "",
+    password: "",
+    role: "Team Member",
+  });
+  const [msg, setMessage] = useState({ message: "", msgError: false });
+  const [loading, setIsLoading] = useState(false);
+
+  const onChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  let timerID = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timerID);
+    };
+  }, []);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    AuthService.register(user).then((data) => {
+      const { message } = data;
+      setMessage(message);
+      setUser({ email: "", name: "", password: "", role: "" });
+      if (!message.msgError) {
+        timerID = setTimeout(() => {
+          setIsLoading(false);
+          props.history.push("/login");
+        }, 2000);
+      } else setIsLoading(false);
+    });
+  };
+
+  const handleRoleChange = (event) => {
+    setUser({ ...user, role: event.target.value });
   };
 
   return (
@@ -53,29 +99,19 @@ export default function SignUp() {
         <Typography component="h1" variant="h5">
           Register
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={onSubmit}>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
                 autoComplete="fname"
-                name="firstName"
+                name="name"
                 variant="outlined"
                 required
                 fullWidth
-                id="firstName"
-                label="First Name"
+                id="name"
+                label="Name"
                 autoFocus
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -87,6 +123,7 @@ export default function SignUp() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -99,6 +136,7 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={onChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -109,8 +147,8 @@ export default function SignUp() {
                 fullWidth
                 labelId="role-choice-label"
                 id="role-choice"
-                value={role}
-                onChange={handleChange}
+                value={user.role}
+                onChange={handleRoleChange}
               >
                 <MenuItem value={"Team Member"}>Team Member</MenuItem>
                 <MenuItem value={"Chapter Lead"}>Chapter Lead</MenuItem>
@@ -141,6 +179,11 @@ export default function SignUp() {
                   Sign in
                 </Button>
               </Typography>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item>
+              <Alert msgError={msg.msgError} message={msg.msgBody} />
             </Grid>
           </Grid>
         </form>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
@@ -13,6 +13,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Copyright from "../components/copyright/copyright";
 import CommunityLogo from "../components/communityLogo/communityLogo";
+import authService from "../services/authService";
+import Alert from "../components/alert/alert";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,9 +51,35 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide() {
+export default function SignInSide(props) {
   const classes = useStyles();
+  const [user, setUser] = useState({ email: "", password: "" });
+  const [msg, setMessage] = useState({ msgError: false, message: "" });
+  const [loading, setIsLoading] = useState(false);
 
+  // const authContext = useContext(AuthContext);
+
+  const onChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const onSubmit = (e) => {
+    setIsLoading(true);
+    e.preventDefault();
+    authService.login(user).then((data) => {
+      const { isAuthenticated, user, message } = data;
+      console.log(data);
+      if (isAuthenticated) {
+        // authContext.setUser(user);
+        // authContext.setIsAuthenticated(isAuthenticated);
+        props.history.push("/profile");
+        setIsLoading(false);
+      } else {
+        setMessage(message);
+        setIsLoading(false);
+      }
+    });
+  };
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -64,7 +92,7 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate onSubmit={onSubmit}>
             <TextField
               variant="outlined"
               margin="normal"
@@ -75,6 +103,7 @@ export default function SignInSide() {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={onChange}
             />
             <TextField
               variant="outlined"
@@ -86,6 +115,7 @@ export default function SignInSide() {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={onChange}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -115,6 +145,11 @@ export default function SignInSide() {
             <Box mt={5}>
               <Copyright />
             </Box>
+            <Grid container>
+              <Grid item>
+                <Alert msgError={msg.msgError} message={msg.msgBody} />
+              </Grid>
+            </Grid>
           </form>
         </div>
       </Grid>

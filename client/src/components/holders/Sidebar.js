@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import { Link as ScrollLink } from "react-scroll";
 import Iframe from "react-iframe";
-import links from '../../data/defaults/links/links'
+import links from "../../data/defaults/links/links";
 const useStyles = makeStyles((theme) => ({
   sidebarAboutBox: {
     padding: theme.spacing(2),
@@ -29,12 +29,10 @@ export default function Sidebar(props) {
   const { webinar, archives, social } = props;
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(
-      links.contributors
-    )
+    fetch(links.contributors)
       .then((response) => response.json())
       .then((data) => setData(data));
-  });
+  }, []);
 
   return (
     <Grid item xs={12} md={4}>
