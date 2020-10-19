@@ -4,9 +4,7 @@ const passport = require("passport");
 const passportCongfig = require("../passport");
 const JWT = require("jsonwebtoken");
 const User = require("../models/User");
-const Blog = require("../models/Blog");
 const keys = require("../config/keys");
-const mongoose = require("mongoose");
 
 const signedToken = (userID) => {
   return JWT.sign(
@@ -20,7 +18,7 @@ const signedToken = (userID) => {
 };
 
 userRouter.post("/register", (req, res) => {
-  const { username, password, role, fullName, email } = req.body;
+  const { name, password, role, email } = req.body;
   User.findOne({ email }, (err, user) => {
     if (err)
       return res
@@ -32,10 +30,9 @@ userRouter.post("/register", (req, res) => {
         .json({ message: { msgBody: "Email Taken", msgError: true } });
     else {
       const newUser = new User({
-        username,
+        name,
         password,
         role,
-        fullName,
         email,
       });
       newUser.save((err) => {
@@ -63,12 +60,12 @@ userRouter.post(
   passport.authenticate("local", { session: false }),
   (req, res) => {
     if (req.isAuthenticated()) {
-      const { _id, username, role, fullName, email } = req.user;
+      const { _id, name, role, email } = req.user;
       const token = signedToken(_id);
-      res.cookie("access_token", token, { httpOnly: true, sameSite: true });
+      res.cookie("access_token", token, { httpOnly: false, sameSite: "none" });
       res.status(200).json({
         isAuthenticated: true,
-        user: { username, role, fullName, email },
+        user: { name, role, email },
         message: { msgBody: "Login Succesful", msgError: false },
       });
     }
@@ -80,7 +77,7 @@ userRouter.get(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     res.clearCookie("access_token");
-    res.json({ user: { email: "", role: "", username: "" }, success: true });
+    res.json({ user: { email: "", role: "", name: "" }, success: true });
   }
 );
 
@@ -88,13 +85,12 @@ userRouter.get(
   "/authenticated",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    const { username, role, fullName, email } = req.user;
+    const { name, role, email } = req.user;
     res.status(200).json({
       isAuthenticated: true,
       user: {
-        username,
+        name,
         role,
-        fullName,
         email,
       },
     });

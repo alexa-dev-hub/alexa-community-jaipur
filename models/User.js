@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 
 const UserSchema = new mongoose.Schema({
-  username: {
+  name: {
     type: String,
     required: true,
     min: 6,
@@ -17,14 +17,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  fullName: {
-    type: String,
-    required: true,
-    min: 3,
-  },
   role: {
     type: String,
-    enum: ["team-member", "community-member"],
+    enum: ["Team Member", "Community Member", "Chapter Lead"],
   },
   blogs: [
     {
