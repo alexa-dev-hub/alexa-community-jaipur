@@ -13,6 +13,7 @@ import {
   MenuItem,
   Select,
   InputLabel,
+  Link,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Copyright from "../components/copyright/copyright";
@@ -94,7 +95,7 @@ export default function SignUp(props) {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar} variant="circle" sizes="">
-          <CommunityLogo />
+           <Link href='/'>  <CommunityLogo /> </Link>
         </Avatar>
         <Typography component="h1" variant="h5">
           Register
