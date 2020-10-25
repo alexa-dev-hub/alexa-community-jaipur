@@ -34,7 +34,6 @@ $text-animation-duration: $animation-duration + 0.5;
 $animation-iterations: 1;
 
 body {
-  background-color: black;
   /*dark background to show size of the logo*/
 }
 
@@ -174,4 +173,98 @@ body {
   100% {
     left: 0;
   }
+}
+
+//profile page style
+.profile-home-btn {
+   background-color: white;
+   text-align: center;
+   margin-top: 30px;
+}
+.profile {
+  box-sizing: border-box;
+  text-decoration: none;
+  background-color: white;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.profile-card {
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profile-header {
+  background: #2c3a47;
+  padding: 60px 40px;
+}
+.profile-pic {
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(130deg,#74b9ff,#e66767);
+  margin: auto;
+  border-radius: 50px;
+  background-size: 200% 200%;
+  animation: animated-gradient 2s linear infinite;
+}
+@keyframes animated-gradient {
+  25%{
+    background-position: left bottom;
+  }
+  50%{
+    background-position: right bottom;
+  }
+  75%{
+    background-position: right top;
+  }
+  100%{
+    background-position: left top;
+  }
+}
+.profile-pic img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name {
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin:10px 0;
+}
+.role {
+  font-size: 18px;
+  color: #6b72dd;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.social-links a{
+  color: #f2f2f2;
+  width: 56px;
+  font-size: 22px;
+  transition: .3s linear;
+}
+.social-links a:hover {
+  color: #6b72dd;
+}
+.contact-btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 50px;
+  color: #6b72dd;
+  border: 2px solid #6b72dd;
+  border-radius: 6px;
+  margin-top: 16px; 
+  transition: .3s linear;
+}
+.contact-btn:hover {
+  color: white;
+  background-color: #6b72dd;
 }

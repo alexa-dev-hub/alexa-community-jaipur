@@ -136,6 +136,14 @@ export default function Header(props) {
             >
               Login
             </Button>
+            <Button
+              variant="contained"
+              size="small"
+              className={classes.button}
+              href="/profile"
+            >
+              Profile
+            </Button>
             {/* <Button variant='contained' size='small' className={classes.button}>
              Logout
            </Button> */}
