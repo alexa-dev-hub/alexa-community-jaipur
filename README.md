@@ -1,4 +1,4 @@
-<img src="https://github.com/imabp/alexa-community-jaipur/blob/master/ReadMe_Assets/ReadMeAsset.PNG"/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/883aeb1c-c65e-4a2a-8f1a-702a6428836e/deploy-status)](https://app.netlify.com/sites/alexadevhub/deploys)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
