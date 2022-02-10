@@ -15,7 +15,7 @@
     "axios": "^0.20.0",
     "lodash": "^4.17.20",
     "markdown-to-jsx": "^6.11.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-clap-button": "^1.2.9",
